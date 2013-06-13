@@ -1,0 +1,25 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+
+\section{Overview}
+  
+  A plataforma SMS Box permite o envio de mensagens de texto (SMS) através de uma plataforma 
+  de hardware baseada em um processador de 8 bits controlando um modem GSM.
+
+  Este guia foca na utilização do SMS Box como uma plataforma de envio de SMS integrada com a aplicação GSMComando e a sua integração no VosCenter.
+    
+  \subsection{Placa SMS Box}
+    A placa é composta pelos seguintes componentes:
+    
+    \begin{itemize}
+      \item Microcontrolador de uso geral PIC18LF4680 I/P;
+      \item Memória flash SDRAM AT45DB041 para download de firmware e geração de logs;
+      \item Circuito de lógica de apoio, composta de portas lógicas e multiplexadores que são encarregados 
+            de realizar a troca dos chips e conformação dos níveis elétricos entre o microcontrolador e o modem GSM;
+      \item Modem GSM SIMCOM 340C;
+      \item LEDs de status de operação da máquina; 
+      \item LED de status de conexão do modem GSM;
+      \item Soquetes de SIM Cards; 
+      \item Conector de comunicação serial com PC \textit{Host}; 
+      \item Conector de debug do modem GSM.
+    \end{itemize}
+    

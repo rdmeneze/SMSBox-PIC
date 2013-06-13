@@ -1,0 +1,10 @@
+<!-- IdSource indica que veio do ECS-->
+<idSource>2</idSource>
+<!-- Quais clientes a plataforma utilizará. Pode passar entre vírgula. 23 é placarca! -->
+<idClient>23</idClient>
+<!-- Flag de exclusividade de envio, 0 = sem exclusividade, 1 = com exclusividade  -->
+<exclusive>1</exclusive>    
+<!-- Número de mensagens que serão retornadas da fila por chamada a SP_SMS_GET_MESSAGE_PRIORITY -->
+<numMensagens>50</numMensagens>
+<!-- Delay em caso de erro, em segundos -->
+<sleepError>60</sleepError>

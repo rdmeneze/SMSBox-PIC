@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="62">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
+      <itemPath>../18f27j13_g.lkr</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f1" displayName="Source" projectFiles="true">
+      <logicalFolder name="f1" displayName="delay" projectFiles="true">
+        <itemPath>../delay.h</itemPath>
+        <itemPath>../delay.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="device" projectFiles="true">
+        <itemPath>../device.h</itemPath>
+        <itemPath>../device.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f5" displayName="led" projectFiles="true">
+        <itemPath>../led.h</itemPath>
+        <itemPath>../led.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f6" displayName="log" projectFiles="true">
+        <itemPath>../log.h</itemPath>
+        <itemPath>../log.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f3" displayName="modemGSM" projectFiles="true">
+        <itemPath>../modemGSM.h</itemPath>
+        <itemPath>../modemGSM.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f7" displayName="serialinterface" projectFiles="true">
+        <itemPath>../SerialPC.h</itemPath>
+        <itemPath>../SerialPC.c</itemPath>
+        <itemPath>../serial.h</itemPath>
+        <itemPath>../serial.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f8" displayName="serialnumber" projectFiles="true">
+        <itemPath>../serialNumber.h</itemPath>
+        <itemPath>../serialNumber.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f4" displayName="version" projectFiles="true">
+        <itemPath>../version.h</itemPath>
+        <itemPath>../version.c</itemPath>
+      </logicalFolder>
+      <itemPath>../main.c</itemPath>
+      <itemPath>../processor.h</itemPath>
+      <itemPath>../defs.h</itemPath>
+      <itemPath>../crc32.c</itemPath>
+      <itemPath>../crc32.h</itemPath>
+      <itemPath>../status.c</itemPath>
+      <itemPath>../status.h</itemPath>
+      <itemPath>../timer.c</itemPath>
+      <itemPath>../timer.h</itemPath>
+      <itemPath>../timer0.c</itemPath>
+      <itemPath>../Timer0.h</itemPath>
+      <itemPath>../cpu.h</itemPath>
+      <itemPath>../cpu.c</itemPath>
+      <itemPath>../simcardcontrol.c</itemPath>
+      <itemPath>../simcardcontrol.h</itemPath>
+      <itemPath>../prgmem_access.c</itemPath>
+      <itemPath>../prgmem_access.h</itemPath>
+      <itemPath>../e2prom.c</itemPath>
+      <itemPath>../e2prom.h</itemPath>
+      <itemPath>../FlashEprom.c</itemPath>
+      <itemPath>../FlashEprom.h</itemPath>
+      <itemPath>../bootloader.c</itemPath>
+      <itemPath>../bootloader.h</itemPath>
+      <itemPath>../CPU_disableAll_Int.asm</itemPath>
+      <itemPath>../CPU_EnableAll_Int.asm</itemPath>
+      <itemPath>../AT45DBxx.c</itemPath>
+      <itemPath>../AT45DBxx.h</itemPath>
+      <itemPath>../sw_spi.h</itemPath>
+      <itemPath>../rdsspi.c</itemPath>
+      <itemPath>../setcsspi.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="default" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <targetDevice>PIC18F27J13</targetDevice>
+        <targetHeader></targetHeader>
+        <platformTool>Simulator</platformTool>
+        <languageToolchain>C18</languageToolchain>
+        <languageToolchainVersion>3.40</languageToolchainVersion>
+        <platform>3</platform>
+      </toolsSet>
+      <compileType>
+        <linkerTool>
+          <linkerLibItems>
+          </linkerLibItems>
+        </linkerTool>
+        <loading>
+          <useAlternateLoadableFile>false</useAlternateLoadableFile>
+          <alternateLoadableFile></alternateLoadableFile>
+        </loading>
+      </compileType>
+      <makeCustomizationType>
+        <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
+        <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
+        <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
+        <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
+        <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
+      </makeCustomizationType>
+      <C18>
+      </C18>
+      <C18-AS>
+      </C18-AS>
+      <C18-LD>
+      </C18-LD>
+      <C18LanguageToolchain>
+      </C18LanguageToolchain>
+      <Simulator>
+      </Simulator>
+    </conf>
+  </confs>
+</configurationDescriptor>

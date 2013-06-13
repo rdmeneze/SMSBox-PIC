@@ -1,0 +1,53 @@
+\documentclass[a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[normalem]{ulem}
+\usepackage[dvips]{graphicx}
+\usepackage{longtable}
+%\usepackage{html}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\usepackage{setspace}
+\usepackage{float}      
+\usepackage{fancyvrb}
+\usepackage{boxit}
+\usepackage{graphicx}
+\usepackage{makeidx,shortvrb,latexsym}
+
+%===== Códigos Fonte =====
+\newenvironment{codeverbatim}{\VerbatimEnvironment \small
+   \begin{Verbatim}[xleftmargin=20mm]}
+   {\end{Verbatim}}
+%=======
+\floatstyle{plain}  % tipos: plain, boxed, ruled
+\newfloat{codigo}{tbp}{lop}[section]  % numera os captions com  número de seção.
+\floatname{codigo}{Listagem}
+% nome para ser usado no sumário
+\newcommand{\listofcodename}{Lista de Códigos}
+%=========================
+
+\def\version{1.0.0}
+\def\stableversion{3.2} 
+
+\title{
+	SMS Box V1.01 \\ Guia do usuário \\
+	\small {versão \version}
+}
+\author{Rafael Dias Menezes}
+\date{Fev/2010}
+
+
+\begin{document}
+\onehalfspacing
+%\maketitle
+\include{titulo}
+\typeout{Copyright Rafael Dias @ Taioba Corporation}
+\tableofcontents
+\listoffigures
+\listoftables
+\include{overview}
+\include{uso}
+
+\clearpage
+\pagestyle{plain}
+\end{document}

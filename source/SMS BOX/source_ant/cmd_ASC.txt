@@ -1,0 +1,7 @@
+//escrita do endereco 0 ao 3 do equipamento: 
+//wait 100 us
+//45 10 00 00 00 04 08 00 01 00 02 00 03 00 04 6A 8A
+//02 05 00 05 01 02 03 04 05 01 03
+
+// ASC
+02 05 00 02 03 0A 0E 03

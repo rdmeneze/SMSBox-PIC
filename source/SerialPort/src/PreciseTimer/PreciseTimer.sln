@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PreciseTimer", "PreciseTimer.vcproj", "{A59B6D75-A8B7-4930-99DB-764AA0B007CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A59B6D75-A8B7-4930-99DB-764AA0B007CC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A59B6D75-A8B7-4930-99DB-764AA0B007CC}.Debug|Win32.Build.0 = Debug|Win32
+		{A59B6D75-A8B7-4930-99DB-764AA0B007CC}.Release|Win32.ActiveCfg = Release|Win32
+		{A59B6D75-A8B7-4930-99DB-764AA0B007CC}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

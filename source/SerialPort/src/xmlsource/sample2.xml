@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!--Nice comment-->
+<root>
+  <!--Nice comment-->
+  <testel x="1" somename="somevalue"/>
+  <elx varx="5" varx2="10"/>
+  <El1>
+    <El2>
+      <El3 var1="x" var2="AAAAAAAAAACgBQAAhAMAAA=="/>
+    </El2>
+  </El1>
+</root>

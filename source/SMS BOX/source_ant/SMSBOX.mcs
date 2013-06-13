@@ -1,0 +1,748 @@
+[Header]
+MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
+Version=1.0
+[File000]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\delay.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File001]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\funcoes.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File002]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\interrupt.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File003]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\main.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File004]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\serial.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File005]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\led.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File006]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\SerialPC.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File007]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\status.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File008]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\cpu.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File009]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\device.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File010]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\log.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File011]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\serialNumber.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File012]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\wrtsspi.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File013]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\setcsspi.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File014]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\rdsspi.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File015]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\clrcsspi.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File016]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\opensspi.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File017]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\writuart.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\MCC18\mpasm\mpasmwin.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+DebugOptions=/d__DEBUG=1 /d__MPLAB_DEBUGGER_ICD2=1
+[File018]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\writuart.err
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\MCC18\mpasm\mpasmwin.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+DebugOptions=/d__DEBUG=1 /d__MPLAB_DEBUGGER_ICD2=1
+[File019]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\uartdata.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\MCC18\mpasm\mpasmwin.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+DebugOptions=/d__DEBUG=1 /d__MPLAB_DEBUGGER_ICD2=1
+[File020]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\uartdata.err
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\MCC18\mpasm\mpasmwin.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+DebugOptions=/d__DEBUG=1 /d__MPLAB_DEBUGGER_ICD2=1
+[File021]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\sw_serial_delays.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File022]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\readuart.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\MCC18\mpasm\mpasmwin.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+DebugOptions=/d__DEBUG=1 /d__MPLAB_DEBUGGER_ICD2=1
+[File023]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\readuart.err
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\MCC18\mpasm\mpasmwin.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+DebugOptions=/d__DEBUG=1 /d__MPLAB_DEBUGGER_ICD2=1
+[File024]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\openuart.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\MCC18\mpasm\mpasmwin.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+DebugOptions=/d__DEBUG=1 /d__MPLAB_DEBUGGER_ICD2=1
+[File025]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\openuart.err
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\MCC18\mpasm\mpasmwin.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+DebugOptions=/d__DEBUG=1 /d__MPLAB_DEBUGGER_ICD2=1
+[File026]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\putsuart.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File027]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\getsuart.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File028]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\d4tcyx.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\MCC18\mpasm\mpasmwin.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+DebugOptions=/d__DEBUG=1 /d__MPLAB_DEBUGGER_ICD2=1
+[File029]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\d4tcyx.err
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\MCC18\mpasm\mpasmwin.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+DebugOptions=/d__DEBUG=1 /d__MPLAB_DEBUGGER_ICD2=1
+[File030]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\crc32.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File031]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\FlashEprom.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File032]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\e2prom.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File033]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\e2prom_loc.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File034]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\AT45DBxx.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File035]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\modemGSM.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File036]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\timer.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File037]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\bootloader.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File038]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\c018i.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File039]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\prgmem_access.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File040]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\CPU_disableAll_Int.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\MCC18\mpasm\mpasmwin.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+DebugOptions=/d__DEBUG=1 /d__MPLAB_DEBUGGER_ICD2=1
+[File041]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\CPU_disableAll_Int.err
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\MCC18\mpasm\mpasmwin.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+DebugOptions=/d__DEBUG=1 /d__MPLAB_DEBUGGER_ICD2=1
+[File042]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\CPU_EnableAll_Int.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\MCC18\mpasm\mpasmwin.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+DebugOptions=/d__DEBUG=1 /d__MPLAB_DEBUGGER_ICD2=1
+[File043]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\CPU_EnableAll_Int.err
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\MCC18\mpasm\mpasmwin.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+DebugOptions=/d__DEBUG=1 /d__MPLAB_DEBUGGER_ICD2=1
+[File044]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\version.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File045]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\hw_spi.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File046]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\timer0.o
+Folder=Intermediary
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=-D_BAUDRATE_AUTOBAUD -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1
+[File047]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\writuart.lst
+Folder=Output
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\MCC18\mpasm\mpasmwin.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+DebugOptions=/d__DEBUG=1 /d__MPLAB_DEBUGGER_ICD2=1
+[File048]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\uartdata.lst
+Folder=Output
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\MCC18\mpasm\mpasmwin.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+DebugOptions=/d__DEBUG=1 /d__MPLAB_DEBUGGER_ICD2=1
+[File049]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\readuart.lst
+Folder=Output
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\MCC18\mpasm\mpasmwin.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+DebugOptions=/d__DEBUG=1 /d__MPLAB_DEBUGGER_ICD2=1
+[File050]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\openuart.lst
+Folder=Output
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\MCC18\mpasm\mpasmwin.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+DebugOptions=/d__DEBUG=1 /d__MPLAB_DEBUGGER_ICD2=1
+[File051]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\d4tcyx.lst
+Folder=Output
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\MCC18\mpasm\mpasmwin.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+DebugOptions=/d__DEBUG=1 /d__MPLAB_DEBUGGER_ICD2=1
+[File052]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\CPU_disableAll_Int.lst
+Folder=Output
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\MCC18\mpasm\mpasmwin.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+DebugOptions=/d__DEBUG=1 /d__MPLAB_DEBUGGER_ICD2=1
+[File053]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\CPU_EnableAll_Int.lst
+Folder=Output
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\MCC18\mpasm\mpasmwin.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+DebugOptions=/d__DEBUG=1 /d__MPLAB_DEBUGGER_ICD2=1
+[File054]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\SMSBOX.cof
+Folder=Output
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={96C98149-AA1B-4CF9-B967-FAE79CAB663C}
+LanguageToolLocation=C:\MCC18\bin\mplink.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=/m"$(BINDIR_)$(TARGETBASE).map" /w /o"$(BINDIR_)$(TARGETBASE).cof"
+TraceCmdString=
+DebugOptions=/z__MPLAB_DEBUG=1 /z__MPLAB_DEBUGGER_ICD2=1 /z__ICD2RAM=1
+[File055]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\SMSBOX.hex
+Folder=Output
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={96C98149-AA1B-4CF9-B967-FAE79CAB663C}
+LanguageToolLocation=C:\MCC18\bin\mplink.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=/m"$(BINDIR_)$(TARGETBASE).map" /w /o"$(BINDIR_)$(TARGETBASE).cof"
+TraceCmdString=
+DebugOptions=/z__MPLAB_DEBUG=1 /z__MPLAB_DEBUGGER_ICD2=1 /z__ICD2RAM=1
+[File056]
+Location=D:\Projects\Fontes\voxage\SMS BOX\source\SMSBOX.map
+Folder=Output
+DeviceName=PIC18F4680
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={96C98149-AA1B-4CF9-B967-FAE79CAB663C}
+LanguageToolLocation=C:\MCC18\bin\mplink.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|C:\mcc18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|delay.c|funcoes.c|interrupt.c|main.c|serial.c|led.c|SerialPC.c|status.c|cpu.c|device.c|log.c|serialNumber.c|wrtsspi.c|setcsspi.c|rdsspi.c|clrcsspi.c|opensspi.c|writuart.asm|uartdata.asm|sw_serial_delays.c|readuart.asm|openuart.asm|putsuart.c|getsuart.c|d4tcyx.asm|crc32.c|FlashEprom.c|e2prom.c|e2prom_loc.c|AT45DBxx.c|modemGSM.c|timer.c|bootloader.c|c018i.c|prgmem_access.c|CPU_disableAll_Int.asm|CPU_EnableAll_Int.asm|version.c|hw_spi.c|timer0.c||<obj>||<lib>||<lkr>|18f4680.lkr||
+SuiteArgsString=
+ToolArgsString=/m"$(BINDIR_)$(TARGETBASE).map" /w /o"$(BINDIR_)$(TARGETBASE).cof"
+TraceCmdString=
+DebugOptions=/z__MPLAB_DEBUG=1 /z__MPLAB_DEBUGGER_ICD2=1 /z__ICD2RAM=1
+[TOOL_LOC_STAMPS]
+tool_loc{49D3CA3F-D9A3-4518-9943-226A347E8CC7}=C:\MCC18\mpasm\mpasmwin.exe
+tool_loc{96C98149-AA1B-4CF9-B967-FAE79CAB663C}=C:\MCC18\bin\mplink.exe
+tool_loc{E56A1C86-9D32-4DF6-8C34-FE0388B1B644}=C:\MCC18\bin\mcc18.exe

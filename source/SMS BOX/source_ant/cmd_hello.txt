@@ -1,0 +1,12 @@
+//escrita do endereco 0 ao 3 do equipamento: 
+//wait 100 us
+//45 10 00 00 00 04 08 00 01 00 02 00 03 00 04 6A 8A
+//02 05 00 05 01 02 03 04 05 01 03
+
+// HELLO
+02 01 00 01 01 01 03
+
+// MODEM_CMD
+02 01 00 0A 02 'A' 'T' '+' 'C' 'F' 'U' 'N' '=' '?' 0x0d 0x0a 0x0F 03
+
+

@@ -1,0 +1,272 @@
+HI-TECH Software PICC18 Compiler V8.35PL2
+
+Linker command line:
+
+-z -MPIC18Fx52-bootload.map -ol.obj \
+  -ppowerup=00h,intcode=08h,intcodelo=018h,init,end_init -ACOMRAM=00h-07Fh \
+  -ptemp=COMRAM -ARAM=0-0FFhx6 -ABIGRAM=0-05FFh -pramtop=0600h \
+  -ACODE=00h-03FFFh,04000h-07FFFh -AFARRAM=00h-00h \
+  -pconfig=0300000h,idloc=0200000h,eeprom_data=0f00000h \
+  -pconst=end_init+0600h \
+  -prbss=COMRAM,rbit=COMRAM,rdata=COMRAM,nvrram=COMRAM,nvbit=COMRAM \
+  -pstruct=COMRAM -pnvram=-600h -pfarbss=FARRAM,fardata=FARRAM \
+  -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pdata=RAM,param \
+  -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -Q18F452 \
+  -h+PIC18Fx52-bootload.sym -E -EC:\DOCUME~1\Shane\LOCALS~1\Temp\_268.AAA \
+  -ver=PICC18#V8.35PL2 C:\HTSOFT\PIC18\LIB\picrt86l.obj \
+  C:\Ulysses - Source code\PIC\PIC18Fx52-bootload\main.obj \
+  C:\Ulysses - Source code\PIC\PIC18Fx52-bootload\bootldr.obj \
+  C:\Ulysses - Source code\PIC\PIC18Fx52-bootload\delay.obj \
+  C:\HTSOFT\PIC18\LIB\pic85--p.lib C:\HTSOFT\PIC18\LIB\pic86l-c.lib 
+
+Object code version is 3.7
+
+Machine type is 18F452
+
+Call graph:
+
+*_main->_boot_loader size 0,46 offset 0
+     _bootldr_init_serial size 0,8 offset 46
+     _bootldr_putch
+     _bootldr_getch
+     _read_program size 7,0 offset 46
+         llslr
+*    _ldr_flash_write size 7,67 offset 46
+*        _load_tbl_ptr size 4,0 offset 124
+*            llslr
+*        _ldr_FLASH_ERASE size 4,0 offset 120
+*            _load_tbl_ptr size 4,0 offset 124
+*                llslr
+*    _load_tbl_ptr size 4,0 offset 124
+*        llslr
+     _eeprom_write size 3,0 offset 46
+         _wait_on_wr
+     llsll
+
+		Name          Link     Load   Length Selector Space Scale
+C:\HTSOFT\PIC18\LIB\picrt86l.obj
+		end_init        26       26        4       C     0
+		init            18       18        2       C     0
+C:\Ulysses - Source code\PIC\PIC18Fx52-bootload\main.obj
+		eeprom_da   F00000   F00000        8  F00000     0
+		config      300000   300000        E  300000     0
+		text           C7E      C7E        A       C     0
+C:\Ulysses - Source code\PIC\PIC18Fx52-bootload\bootldr.obj
+		bigbss         5F6      5F6        A     5F6     1
+		temp             0        0        8       0     1
+		bootloade       2A       2A      BB2       C     0
+C:\Ulysses - Source code\PIC\PIC18Fx52-bootload\delay.obj
+		text           C14      C14       2E       C     0
+
+C:\HTSOFT\PIC18\LIB\pic85--p.lib
+eewrite.obj     text           BDC      BDC       38       C     0
+waitonwr.obj    text           C72      C72        C       C     0
+
+C:\HTSOFT\PIC18\LIB\pic86l-c.lib
+btemp0.obj      temp             0        0        1       0     1
+btemp1.obj      temp             0        0        2       0     1
+btemp2.obj      temp             0        0        3       0     1
+btemp3.obj      temp             0        0        4       0     1
+btemp4.obj      temp             0        0        5       0     1
+btemp5.obj      temp             0        0        6       0     1
+btemp6.obj      temp             0        0        7       0     1
+btemp7.obj      temp             0        0        8       0     1
+clrbigbss.obj   init            1A       1A        C       C     0
+clr.obj         text             6        6       12       3     0
+lsll.obj        temp             0        0        5       0     1
+		text           C42      C42       18       C     0
+lslr.obj        temp             0        0        5       0     1
+		text           C5A      C5A       18       C     0
+powerup.obj     powerup          0        0        4       0     0
+
+COMMON          param           80       80       80      80     1
+
+TOTAL		Name          Link     Load   Length
+	CLASS	COMRAM   
+		temp             0        0        8
+
+	CLASS	RAM      
+		param           80       80       80
+
+	CLASS	BIGRAM   
+		bigbss         5F6      5F6        A
+
+	CLASS	CODE     
+		powerup          0        0        4
+		end_init        26       26        4
+		init            18       18        E
+		text           C7E      C7E        A
+		bootloade       2A       2A      BB2
+		text           C14      C14       2E
+		text           BDC      BDC       38
+		text           C72      C72        C
+		text             6        6       12
+		text           C42      C42       18
+		text           C5A      C5A       18
+
+	CLASS	FARRAM   
+
+	CLASS	EEDATA   
+		eeprom_da   F00000   F00000        8
+
+	CLASS	IDLOC    
+
+	CLASS	CONFIG   
+		config      300000   300000        E
+
+
+
+SEGMENTS	Name		Load	Length	 Top	Selector    Space Class
+
+		temp            000000	000008	000008	       0       1  COMRAM  
+		powerup         000000	000004	000004	       0       0  CODE    
+		text            000006	000012	000018	       3       0  CODE    
+		intcodelo       000018	000C70	000C88	       C       0  CODE    
+		param           000080	000080	000100	      80       1  RAM     
+		bigbss          0005F6	00000A	000600	     5F6       1  BIGRAM  
+		config          300000	00000E	30000E	  300000       0  CONFIG  
+		eeprom_data     F00000	000008	F00008	  F00000       0  EEDATA  
+
+
+UNUSED ADDRESS RANGES
+
+	BIGRAM           000008-00007F
+	                 000100-0005F5
+	CODE             000004-000005
+	                 000C88-007FFF
+	COMRAM           000008-00007F
+	RAM              000008-00007F
+	                 000100-0005F5
+
+                                  Symbol Table
+
+?_eeprom_write         param        0000AE
+?_ldr_FLASH_ERASE      param        0000F8
+?_ldr_flash_write      param        0000AE
+?_load_tbl_ptr         param        0000FC
+?_read_config          param        000080
+?_read_program         param        0000AE
+?a_boot_loader         param        000080
+?a_bootldr_init_serial param        0000AE
+?a_ldr_flash_write     param        0000B5
+?a_send_reg            param        000080
+_DelayMs               text         000C14
+__Bnvbit               nvbit        000008
+__Brbit                rbit         000008
+__H__Z15668RS_         __Z15668RS_  000004
+__Hbigbss              bigbss       000600
+__Hbigdata             bigdata      000008
+__Hbootloader          bootloader   000004
+__Hbss                 bss          000004
+__Hclrtext             clrtext      000004
+__Hconfig              config       30000E
+__Hconst               const        000600
+__Hdata                data         000008
+__Heeprom_data         eeprom_data  F00008
+__Hend_init            end_init     00002A
+__Hfarbss              farbss       000000
+__Hfardata             fardata      000000
+__Hfstlkup             fstlkup      000004
+__Hibigdata            ibigdata     000004
+__Hidata               idata        000004
+__Hidloc               idloc        200000
+__Hifardata            ifardata     000004
+__Hinit                init         000026
+__Hintcode             intcode      000008
+__Hintcodelo           intcodelo    000018
+__Hintentry            intentry     000004
+__Hintret              intret       000004
+__Hintsave_regs        intsave_regs 000008
+__Hirdata              irdata       000004
+__Hnvbit               nvbit        000040
+__Hnvram               nvram        000600
+__Hnvrram              nvrram       000008
+__Hparam               param        000100
+__Hpowerup             powerup      000004
+__Hramtop              ramtop       000600
+__Hrbit                rbit         000040
+__Hrbss                rbss         000008
+__Hrdata               rdata        000008
+__Hstruct              struct       000008
+__Htemp                temp         000008
+__Htext                text         000004
+__L__Z15668RS_         __Z15668RS_  000004
+__Lbigbss              bigbss       0005F6
+__Lbigdata             bigdata      000008
+__Lbootloader          bootloader   000004
+__Lbss                 bss          000004
+__Lclrtext             clrtext      000004
+__Lconfig              config       300000
+__Lconst               const        000600
+__Ldata                data         000008
+__Leeprom_data         eeprom_data  F00000
+__Lend_init            end_init     000026
+__Lfarbss              farbss       000000
+__Lfardata             fardata      000000
+__Lfstlkup             fstlkup      000004
+__Libigdata            ibigdata     000004
+__Lidata               idata        000004
+__Lidloc               idloc        200000
+__Lifardata            ifardata     000004
+__Linit                init         000018
+__Lintcode             intcode      000008
+__Lintcodelo           intcodelo    000018
+__Lintentry            intentry     000004
+__Lintret              intret       000004
+__Lintsave_regs        intsave_regs 000008
+__Lirdata              irdata       000004
+__Lnvbit               nvbit        000040
+__Lnvram               nvram        000600
+__Lnvrram              nvrram       000008
+__Lparam               param        000080
+__Lpowerup             powerup      000000
+__Lramtop              ramtop       000600
+__Lrbit                rbit         000040
+__Lrbss                rbss         000008
+__Lrdata               rdata        000008
+__Lstruct              struct       000008
+__Ltemp                temp         000000
+__Ltext                text         000004
+__S0                   (abs)        000C88
+__S1                   (abs)        000600
+__ramtop               ramtop       000600
+_application_jump      bootloader   000BD2
+_boot_loader           bootloader   000034
+_bootldr_getch         bootloader   000634
+_bootldr_init_serial   bootloader   0006DE
+_bootldr_putch         bootloader   000678
+_eeprom_write          text         000BDE
+_exit                  init         000018
+_ldr_FLASH_ERASE       bootloader   0008F4
+_ldr_flash_write       bootloader   00072A
+_load_tbl_ptr          bootloader   0008C0
+_main                  text         000C7E
+_read_EE               bootloader   000922
+_read_config           bootloader   00093A
+_read_program          bootloader   000688
+_register_send         bootloader   00002A
+_send_reg              bootloader   00095A
+_wait_on_wr            text         000C72
+alsll                  text         000C42
+clear_big              init         00001A
+clear_ram              text         000008
+config_word1           config       300000
+config_word2           config       300002
+config_word4           config       300006
+config_word5           config       300008
+config_word6           config       30000A
+config_word7           config       30000C
+intlevel0              fstlkup      000004
+intlevel1              fstlkup      000004
+llsll                  text         000C42
+llslr                  text         000C5A
+powerup                powerup      000000
+start                  init         000018
+used_btemp0            (abs)        000001
+used_btemp1            (abs)        000001
+used_btemp2            (abs)        000001
+used_btemp3            (abs)        000001
+used_btemp4            (abs)        000001
+used_btemp5            (abs)        000001
+used_btemp6            (abs)        000001
+used_btemp7            (abs)        000001

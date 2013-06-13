@@ -1,0 +1,27 @@
+-- Versão 1.1
+  Implementar : 
+	* sistema de gerenciamento de dispositivos genéricos: 
+		-- OK - implementação do modem como elemento de controle acessível externamente;
+		-- implementação de funções de controle de dispositivos e agregá-la ao protocolo de comunicação;
+
+	* sistema de log:
+		-- OK - acesso a memoria e2prom interna
+		-- OK - acesso a memoria flash AT45DB041D - ainda falta implementar diversas coisas e montar a placa com uma memória serial externa
+		-- OK - durante os testes observar o que ocorre quando o dado a ser lido de da flash está nas bordas do buffer
+
+	* criptografia (blowfish, 3DES, etc) para realizar o download do firmware
+		-- pesquisar por bibliotecas de apoio para criptografia
+
+	* boot loader:
+		-- implementar funções de download de firmware;
+		-- implementar rotinas de verificação de integridade do firmware;
+		
+	* rotinas de CRC16 para checksum
+        -- rotinas de CRC32 para checksum		
+
+    * desenvolver firmware para bootloader: 
+        -- implementar baseado na versão de bootloader disponibilizado pela Microchip.
+
+	* melhorar sistema de gerenciamento de dispositivos: 
+		-- Inserir controle de tempo na mudança de estado do dispositivo; 
+		-- Inserir forma aumomática de controle de estado do dispositivo; 

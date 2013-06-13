@@ -1,0 +1,9 @@
+[p GLOBOPT AUTOSTATIC LARGE_MODEL SMALL_DATA LFSROK ERRATA_FXX2_B3 FAST_INTS ]
+"12 C:\Ulysses - Source code\PIC\PIC18Fx52-bootload\delay.c
+[v _DelayMs `(v  1 e 0 0 ]
+{
+[v _cnt `uc  1 a 1 w ]
+"14
+[v _cnt `uc  1 a 1 fsr0l ]
+"20
+} 0

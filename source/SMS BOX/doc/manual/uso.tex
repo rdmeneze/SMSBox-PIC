@@ -1,0 +1,281 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+
+\section{Utilização da SMS Box}
+
+\subsection{Requisitos}
+Para utilizar a SMS Box os seguintes ítens se faz necessários:
+    \begin{itemize}
+      \item SMS Box;
+      \item Fonte de alimentação AC/DC (7.5Vdc à 15Vdc @ 0,4A), 2.5mm;
+      \item Cabos para comunicação entre a SMS Box e o PC \textit{Host}.
+    \end{itemize}
+
+
+\subsection{Layout}
+  A figura \ref{fig:laySMSBOX_top} mostra a disposição dos componentes constituintes da SMS Box V1.01.
+  
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=.3]{Layout.eps}
+  \caption{Layout SMS Box - Top View}
+  \label{fig:laySMSBOX_top}
+\end{figure}
+  
+  
+  
+\subsection{Energização}
+A SMS Box requer uma alimentação de 7.5Vdc à 15Vdc. A ligação deve 
+ser realizada através do jack J1. Para alimentação de diversas SMS Box 
+aproveitando a mesma fonte devemos utilizar um \textit{flat cable} 
+interconectando as placas através das barras de terminais P1 e P2.
+
+
+\subsection{Configurando a SMS Box}
+  Antes de energizar a placa verifique se todos os componentes estão 
+devidamente conectados, bem como se o jumper P5 está conectado entre 
+os pontos \textbf{SP} e \textbf{GND}.  Sem a presença dessa conexão a SMS Box não funcionará.
+
+  A comunicação entre a SMS Box e o \textit{Host} é realizado através de um link de comunicação serial RS232 
+com \textit{baudrate} fixo em 19200bps. Esse parâmetro é muito importante para a conexão da mesma com o 
+\textit{software} de controle, ou seja, o \textit{GSMComando} ou a própria \textit{Switch}. 
+
+Assim que a SMS Box é energizada, o LED \textit{NET LIGHT} começa a piscar interruptamente indicando que o modem GSM está em operação. 
+A tabela \ref{tab:PadraoNET_LIGHT} mostra o estado apresentado pelo padrão de piscadas do LED \textit{NET LIGHT}.
+
+	\begin{table}[!htb]
+		\centering
+		\begin{tabular}{|c|p{4.5cm}|}
+			\hline
+			\textbf{Estado NET LIGHT}			        &  		\multicolumn{1}{|c|}{\textbf{função no SIM340C}} \\ \hline 
+			Desligado                             & SIM340C não está ligado       \\ \hline
+      64ms ligado / 800ms + 50\% desligado  & SIM340C não encontrou a rede  \\ \hline
+      64ms ligado / 3000ms + 50\% desligado & SIM340C encontrou a rede      \\ \hline
+		\end{tabular}
+		\label{tab:PadraoNET_LIGHT}
+		\caption{Estado de operação do LED NET LIGHT}
+	\end{table}
+  
+
+Adicionalmente ao LED NET LIGHT há o LED STATUS que indica o estado de operação da SMS Box com o \textit{Host} e alguns estados de erro na plataforma. 
+Esses estados são dados pela tabela \ref{tab:PadraoSTATUS}.
+
+	\begin{table}[!htb]
+		\centering
+		\begin{tabular}{|c|p{4.5cm}|}
+			\hline
+			\textbf{Estado LED STATUS}			              &  		\multicolumn{1}{|c|}{\textbf{estado SMS Box}}     \\ \hline 
+			Desligado                                     &  SMS Box desligado                                    \\ \hline
+			Uma piscada de 10ms e 2990ms desligado        &  SMS Box ligado e sem conexão com o \textit{Host}     \\ \hline
+			Duas piscadas de 10ms e 2970ms desligado      &  SMS Box ligado e com conexão com o \textit{Host}     \\ \hline
+		\end{tabular}
+		\label{tab:PadraoSTATUS}
+		\caption{Estado de operação do LED STATUS}
+	\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+\subsection{Utilizando a SMS Box com a aplicação GSMComando}
+  \subsubsection{Introdução}
+  Para a realização de testes com a SMS Box podemos utilizar uma aplicação chamada GSMComando, que tem por função principal 
+realizar o controle da SMS Box. Esse controle é realizado através da troca de mensagens entre o GSMComando e a SMS Box. O requisito 
+mandatório para a operação da plataforma é a presença de um canal de comunicação serial DB9. Nos computadores atuais a interface 
+de comunicação \textit{COM} não é mais fornecida, sendo necessário adquirir placas de expansão para interface serial ou conversores USB/RS232.
+
+  \subsubsection{Funções básicas}
+Assim que a aplicação GSMComando é executada, este apresenta a tela mostrada na figura \ref{fig:GSMComando_telainicial}.
+
+    \begin{figure}[!htb]
+      \centering
+      \includegraphics[scale=.35]{GSMComando.Telainicial.eps}
+      \caption{Tela inicial GSMComando}
+      \label{fig:GSMComando_telainicial}
+    \end{figure}
+  
+  Para que a comunicação entre a SMS Box e o GSMComando seja estabelecida com sucesso deve-se
+inicialmente configurar a porta de comunicação serial através dos campos \textbf{Device Number} e \textbf{Baud Rate}, 
+localizados no lado inferior esquedo da aplicação. Caso a porta configurada esteja errada, assim que houver uma 
+tentativa de abrir a porta serial a aplicação mostrará na barra de status a mensagem de erro \textbf{\textit{Error openning COMX}}. 
+Como informado anteriormente, o baudrate utilizado pela SMS Box é fixo em 19200bps e a utilização de um baudrate diferente deste 
+acarreta no não estabelecimento da comunicação entre o \textit{Host} e a SMS Box. 
+
+  Após abrir a porta de comunicação serial os botões de controle da aplicação são habilitados e podemos operar a SMS Box. 
+A tabela  \ref{gsmcomando:botoes_funcionalidades} descreve os controles e suas funcionalidades.
+
+\begin{center}
+\begin{longtable}{|l|p{7.5cm}|}
+
+\hline \multicolumn{1}{|c|}{\textbf{Botão}} & \multicolumn{1}{c|}{\textbf{Funcionalidade}} \\[0.5ex] \hline 
+\endfirsthead
+
+\multicolumn{2}{c}%
+{{\bfseries \tablename\ \thetable{} -- continuação da página anterior}} \\
+\hline \multicolumn{1}{|c|}{\textbf{Botão}} & \multicolumn{1}{c|}{\textbf{Funcionalidade}} \\[0.5ex] \hline 
+\endhead
+
+\hline \multicolumn{2}{|r|}{{Continua na próxima página}} \\[0.5ex] \hline
+\endfoot
+
+\endlastfoot
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textit{Open}             & Realiza a abertura/fechamento da porta de comunicação serial          \\ \hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textit{Baud Rate}        & Configura o baud rate da comunicação entre a SMS Box e o GSMComando   \\ \hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textit{Device Number}    & Indica qual é a placa que será acessada.                               \\ \hline    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                   
+\textit{Send Hello}       & Envia mensagem de início de comunicação entre a SMS Box e o GSMComando. 
+                            O envio deste comando é mandatório na operação da SMS Box.                  \\ \hline                       
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textit{Get Log}          & Envia mensagem de solicitação de captura de Log. Assim que a linha 
+                            de log é recebido pela aplicação GSMComando, o mesmo é adicionado no 
+                            final do arquivo de log modem.txt.                                          \\ \hline     
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                            
+\textit{Set Sim Card}     & Controle \textbf{Sim Card} e o botão \textbf{Set} trabalham em conjunto 
+                            para escolher qual SIM Card deve estar operante no momento. Na SMS Box, os LEDs SS0 à SS3 
+                            indicam qual Sim Card está ativo no momento.                                \\ \hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textit{Clear}            & Após realizar a leitura do rótulo do Sim Card, podemos limpá-lo através deste botão. 
+                            A leitura do rótulo do Sim card só pode ser realizada quando o modem se registrar na rede 
+                            utilizando o Sim Card.                                                      \\ \hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textit{Show Label}       & Realiza a leitura do rótulo do Sim Card. A leitura do rótulo do Sim card somente 
+                            pode ser realizada quando o modem se registrar na rede utilizando o Sim Card. \\ \hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textit{Set Label}        & Realiza a leitura do rótulo do Sim Card. A leitura do rótulo do Sim card só 
+                            pode ser realizada quando o modem se registrar na rede utilizando o Sim Card. \\ \hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textit{SMS}              & Controles responsáveis pelo envio de mensagens SMS pelo SMS Box. Até a versão 1.02 do 
+                            SMS Box os SMSs podem ser enviados somente com o modo texto.                  \\ \hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                            
+\textit{Modem commands}   & Lista diversos controles utilizados para enviar comandos AT pré-formatados ao modem. 
+                            Entre as opções existentes temos comandos para desligar e ligar o módulo RF do modem GSM, 
+                            desligar o echo, checar se o SIM Card está conectado (sem a necessidade de esperar o modem 
+                            responder com um \textit{Call Ready}), SMS modo texto e setar visualização de erro. 
+                            Apresenta também  a opção de enviar comandos AT editados pelo usuário através do controle 
+                            \textit{Modem Command Editor}, logo abaixo do controle memo que mostra a troca de mensagens
+                            entre a SMS Box e o GSMComando.                                               \\ \hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                            
+\caption{GSMComando, botões e funcionalidades.} 
+\label{gsmcomando:botoes_funcionalidades} 
+
+\end{longtable}
+\end{center}
+
+
+\subsubsection{Operação}
+
+  Vamos dar em forma de pequenos passos como deve ser realizado a operação da SMS Box com o GSMComando:
+  \begin{enumerate}[i.]
+    \item Energize a SMS Box. Neste momento os LEDs SSx devem permanecer ligados e o LED NetLight iniciar a 
+          piscar. Depois de um tempo o LED Status inicia a piscar indicando que o modem está no operante e que 
+          o \textit{Host} não está comunicando com a SMS Box;
+    \item Conecte o link de comunicação serial;
+    \item Execute a aplicação GSMComando e realize a configuração básica da aplicação, como o baudrate, porta de comunicação, etc;
+    \item Abra a porta de comunicação serial, através do botão \textit{Open};
+    \item Inicie a comunicação com a SMS Box enviando um comando HELLO. A partir deste momento o LED Status alterna entre 
+          representação do estado de operação do modem e o estado de conectividade do \textit{Host};
+    \item Envie os comandos \textit{Echo Off}, \textit{Modem Off}, \textit{SMS Like Text} e \textit{Set Log Error}. A ordem de envio não é mandatório. 
+          Os comandos enviados e as respostas recebidas pela aplicação GSMComando são logadas na parte superior da aplicação, sendo que as linhas brancas 
+          são os comandos enviados e as linhas azuis são as respostas recebidas;
+    \item Certifique-se de que há pelo menos um SIM Card inserido na SMS Box;
+    \item Escolha o Sim Card desejado, através dos controles \textit{Sim Card} e \textit{Set}. Neste momento aparecerá a mensagem ACTIVE SIM CARD na
+          parte superior da aplicação; 
+    \item Espere pelo recebimento da mensagem \textit{Call Ready}. A partir do momento da recepção desta mensagem a SMS Box estará apta a enviar SMSs, 
+          obter o label do SIM Card e realizar todas as demais operações. 
+  \end{enumerate}
+  
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Integrando a SMS Box ao VosCenter}
+  Para integrar a SMS Box ao VosCenter devemos inicialmente verificar se o script LUA que 
+utilizado para realizar a operação fora implementado para operar com as placas Khomp. Essa configuração 
+da plataforma é muito importante pois o script LUA para a SMS Box é diferente do script LUA que funciona com as placas Khomp. 
+O motivo é que as placas Khomp funcionam somente com 1 Sim card por modem e o SMSBOX funciona com até 16 e implementa a função NEXT SIMCARD.
+Para o funcionamento das suas placas simultaneamente na mesma máquina, configurar para a placa Khomp o 
+script 1001 e para a placa SMSBOX o script 9999.
+
+\subsubsection{Instalação das placas no ambiente VosCenter}
+
+  Roteiro executado SMSBOX \\
+  
+  \begin{center}
+    \begin{minipage}[!htb]{6cm}
+      SERVER:NETSMSBD \\
+      DATABASE:Voscenter2 \\
+      USER:switch \\
+      PASSWORD:******** \\
+    \end{minipage}
+  \end{center}
+
+  ECS 
+  
+  \begin{center}
+    \begin{minipage}[!htb]{6cm}
+      URL:http://netsmsbd:8080/ECS/Controller \\
+      USER: placarca \\
+      PASSWORD: ******** \\
+    \end{minipage}
+  \end{center}
+
+  A versão da Switch é a 7.17.0.0, específica sem proteção.
+
+  Na listagem \ref{code:config.xml} mostramos a configuração para a placa SMS Box e Khomp.
+
+  \begin{codigo}[!htb]
+     \tiny  % tamanho da fonte
+     \begin{boxit}  % coloca o código dentro de um Box
+        \vspace{2mm}
+        \VerbatimInput[xleftmargin=8mm,numbers=left,obeytabs=true]{config.xml}
+     \end{boxit}
+     \caption{Arquivo config.xml do script SMSBOX.}
+     \label{code:config.xml}
+  \end{codigo}
+
+    
+    Na configuração da tabela \textit{TCTIport}, muito importante observar dois campos: \textit{SerialPortNumber} e 
+  \textit{SerialPortBaudrate}. Para a SMS Box, é necessário configurar os dois.
+
+  É importante configurar na tabela T\_ICP\_SMS\_CONFIGURATION o campo NU\_TIME\_DELAY para 20. Isso quer dizer 
+  que entre uma mensagem e outra, o sistema colocará um delay de 20seg. Para as placas SMSBOX, este tempo 
+  é necessário para não gerar congestionamento na rede.Talvez seja possível colocar um número menor, por exemplo 13.
+
+\subsubsection{Roteiro de teste - VosCenter / SMSBOX}
+  Para a correta verificação do fncionamento da SMS Box com o VosCenter, siga o procedimentio descrito abaixo:
+  
+  \begin{enumerate}
+    \item Verifique se as placas estão em operação.
+        Após realizar o \textit{upload} do firmware para a placa, verifique o 
+          funcionamento observando os LEDs STATUS e NET LIGHT, como descrito nas tabelas \ref{tab:PadraoNET_LIGHT} e \ref{tab:PadraoSTATUS}.
+          Se o LED não estiver piscando, a placa está com algum problema de inicialização do firmware.
+
+    \item Realize testes básico de comunicação entre servidor e a SMS Box. Para testar a comunicação entre 
+        o servidor e a placa, mandar mensagens, passar por todos os chips, etc. Esta etapa pode ser realizada com o GSMComando. 
+        
+    \item Enviar mensagem para um determinado grupo. Inicie um script LUA 
+        (já existente na máquina \textit{SMSBOXSW01}) na porta e verificar o \textbf{idClient} configurado no XML.
+
+    \item Responda a mensagem enviada pela plataforma e verifique se o conteúdo foi gravado na base de dados.
+        
+    \item Extraia o relatório a partir do ECS e verifique se as mensagens enviadas batem com o relatório. Todas as mensagens 
+          enviadas devem bater no relatório gerencial e analítico do ECS.
+        
+    \item Verifique ciclo de envio das mensagens
+        \begin{enumerate}[a.]
+          \item Esgotar as mensagens em todos os chips;
+          \item Verificar se a aplicação altera de um sim card para outro automaticamente;
+          \item Verificar se após o sim card 16, a aplicação muda para o sim card  1 automaticamente.
+        \end{enumerate}
+    
+    \item Verifique se a procedure SP\_EXPORT\_DATA está retornando os dados corretamente
+    
+  \end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+ 
+\subsubsection{Resolução de problemas}
+  Os principais problemas que enfrentamos na operação da SMS Box são decorrentes da mal instalação dos Sim cards e configuração 
+errada do baud rate e canal de comunicação. Durante a operação do mesmo, pode ocorrer do modem cessar o envio de respostas aos comandos AT e 
+nesta ocasião somente nos resta a opção de desligar e ligar o modem.

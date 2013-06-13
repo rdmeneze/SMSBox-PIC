@@ -1,0 +1,16 @@
+\select@language {brazil}
+\contentsline {section}{\numberline {1}Overview}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Placa SMS Box}{3}{subsection.1.1}
+\contentsline {section}{\numberline {2}Utiliza\c c\~ao da SMS Box}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}Requisitos}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Layout}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Energiza\c c\~ao}{4}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Configurando a SMS Box}{4}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Utilizando a SMS Box com a aplica\c c\~ao GSMComando}{5}{subsection.2.5}
+\contentsline {subsubsection}{\numberline {2.5.1}Introdu\c c\~ao}{5}{subsubsection.2.5.1}
+\contentsline {subsubsection}{\numberline {2.5.2}Fun\c c\~oes b\'asicas}{6}{subsubsection.2.5.2}
+\contentsline {subsubsection}{\numberline {2.5.3}Opera\c c\~ao}{8}{subsubsection.2.5.3}
+\contentsline {subsection}{\numberline {2.6}Integrando a SMS Box ao VosCenter}{9}{subsection.2.6}
+\contentsline {subsubsection}{\numberline {2.6.1}Instala\c c\~ao das placas no ambiente VosCenter}{9}{subsubsection.2.6.1}
+\contentsline {subsubsection}{\numberline {2.6.2}Roteiro de teste - VosCenter / SMSBOX}{10}{subsubsection.2.6.2}
+\contentsline {subsubsection}{\numberline {2.6.3}Resolu\c c\~ao de problemas}{11}{subsubsection.2.6.3}

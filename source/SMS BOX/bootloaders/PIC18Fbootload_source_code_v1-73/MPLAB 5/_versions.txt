@@ -1,0 +1,30 @@
+v0-00
+
+Tested 100%.
+
+v0-01
+
+Based on: v0-00
+Zip: "_PIC18Fbootload_v0-01.zip"
+
+Changed //#define MCWP	TRUE to make it a more generic bootloader
+Compiled 3.68Mhz and 20Mhz versions of code.
+
+v0-02
+
+Based on: v0-01
+Zip: "_PIC18Fbootload_v0-02.zip"
+
+Changed 20Mhz so it uses HS crystal.
+
+v0-03
+
+Based on: v0-02
+
+v0-04
+
+Works nicely.
+
+
+
+

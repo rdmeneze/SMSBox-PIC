@@ -1,0 +1,22 @@
+﻿Build started 18/2/2011 23:52:14.
+     1>Project "D:\user\rdias\sources\voxage\SMSBoxDLL\src\xmlsource\xmltest.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating ".\xmltest.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         d:\Arquivos de programas\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D XML_OPTIONAL_WIN32 /D XML_OPTIONAL_MIME /D XML_OPTIONAL_IMPORTDB /D XML_OPTIONAL_IMPORTRKEY /D WINVER=0x0500 /D _CRT_SECURE_NO_WARNINGS /D _USE_32BIT_TIME_T /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\\" /Fd".\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt xml.cpp xmltest.cpp
+         xmltest.cpp
+     1>xmltest.cpp(43): warning C4101: 'y' : unreferenced local variable
+         xml.cpp
+         Generating Code...
+       Link:
+         d:\Arquivos de programas\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"xmltest.exe" /INCREMENTAL /NOLOGO comctl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST:NO /DEBUG /PDB:"D:\user\rdias\sources\voxage\SMSBoxDLL\src\xmlsource\xmltest.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /IMPLIB:".\xmltest.lib" /MACHINE:X86 .\xml.obj
+         .\xmltest.obj
+         xmltest.vcxproj -> D:\user\rdias\sources\voxage\SMSBoxDLL\src\xmlsource\.\xmltest.exe
+       FinalizeBuildStatus:
+         Deleting file ".\xmltest.unsuccessfulbuild".
+         Touching ".\xmltest.lastbuildstate".
+     1>Done Building Project "D:\user\rdias\sources\voxage\SMSBoxDLL\src\xmlsource\xmltest.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:11.06

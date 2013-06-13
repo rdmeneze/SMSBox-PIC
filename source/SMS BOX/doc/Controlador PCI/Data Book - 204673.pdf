@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>PLX Technology</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<style type="text/css" media="screen">@import "/css/s.css";</style>
+<link rel="stylesheet" type="text/css" media="print" title="print" href="/css/p.css" />
+
+<style type="text/css">
+<!--
+#flashdiv {
+	margin: 50px 0;
+	display: none;
+}
+-->
+</style>
+
+<script type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#flashdiv").fadeIn(1200);
+	});
+</script>
+
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+<div id="skip"><a href="#content" accesskey="1">Skip Navigation</a></div>
+
+<div id="container">
+
+<div id="header" title="PLX Technology - The I/O Interconnect Solution">
+	<h1 title="PLX Technology"><a href="/"><span class="alt">PLX Technology</span></a></h1>
+<p class="mydatalogin"><a href="/mydata">Member Log-in</a> (databooks/tools)<br />
+<a href="/support/portal">Technical Support Log-in</a></p></div>
+
+<div id="nav">
+	<ul>
+<li><a href="/products" title="Products" accesskey="p"><em>P</em>roducts</a>
+	<ul>
+	<li><a href="/products/expresslane/switches" title="PCIe Switches">PCIe Switches</a></li>
+		<li><a href="/products/expresslane/bridges" title="PCIe Bridges">PCIe Bridges</a></li>
+		<li><a href="/products/consumer/" title="Oxford Storage Controllers">Oxford Storage Controllers</a></li>		
+ 		<li><a href="/products/uart/" title="Serial Bridges / UART's ">Serial Bridges / UART's </a></li>
+		<li><a href="/products/fastlane/" title="PCI and PCI-X Bridges">PCI and PCI-X Bridges</a></li>
+		<li><a href="/products/io/" title="Local Bus Master &amp; Target Bridges">Local Bus Master &amp; Target Bridges</a></li>		
+		<li><a href="/products/net2000/" title="USB Controllers">USB Controllers</a></li>
+	</ul></li>
+
+<li><a href="/applications" title="Applications" accesskey="a"><em>A</em>pplications</a>
+	<ul>
+	<li><a href="/applications/server" title="Server">Server</a></li>
+	<li><a href="/applications/storage" title="Enterprise Storage">Enterprise Storage</a></li>
+	<li><a href="/applications/consumerstorage" title="Consumer Storage">Consumer Storage</a></li>
+	<li><a href="/applications/communications" title="Communications">Communications</a></li>
+	<li><a href="/applications/electronics" title="PC Peripheral &amp; Consumer Electronics">PC Peripheral &amp; Consumer Electronics</a></li>
+	<li><a href="/applications/embedded" title="Embedded / Other">Embedded / Other</a></li>
+	</ul></li>
+
+<li><a href="/support" title="Support" accesskey="s"><em>S</em>upport</a>
+	<ul>
+	<li><a href="/support/portal" title="Support Portal">Technical Support Login</a></li>
+	<li><a href="/mydata" title="Databook Access Login">Databook Access Login</a></li>
+    <li><a href="/support/interop" title="Interoperability Reports">Interoperability Reports</a></li>
+	<li><a href="/products/sdk/" title="Software Development Kits (SDKs)">Software Development Kits (SDKs)</a></li>	
+	<li><a href="/support/rohs" title="Green &amp; RoHS Compliance">Green &amp; RoHS Compliance</a></li>
+	<li><a href="/products/expresslane/techinfo" title="White Papers">White Papers</a></li>
+	<li><a href="/products/general" title="Common Documentation ">Common Documentation</a></li>
+	<li><a href="/support/partners" title="Partner Program">Partners &amp; Affiliates</a></li>
+	<li><a href="/support/training" title="PCIe Technical Training">PCIe Technical Training</a></li>
+	<li><a href="/support/quality" title="Quality &amp; Reliability">Quality &amp; Reliability</a></li>	
+	</ul></li>
+	
+<li><a href="/investors" title="Investors" accesskey="i"><em>I</em>nvestors</a>
+	<ul>
+	<li><a href="/investors" title="Investor Central">Investor Central</a></li>
+	<li><a href="/investors/financial" title="Financial Information">Financials</a></li>
+	<li><a href="/investors/news_events" title="News &amp; Events">News &amp; Events</a></li>
+	<li><a href="/investors/corporate_governance" title="Corporate Governance">Corporate Governance</a></li>
+	<li><a href="/investors/executive" title="Executive Management">Executive Management</a></li>
+	<li><a href="/investors/board" title="Board of Directors">Board of Directors</a></li>	
+	</ul></li>
+	
+<li><a href="/about" title="About" accesskey="b">A<em>b</em>out</a>
+	<ul>
+	<li><a href="/about/locations" title="PLX Office Locations">PLX Office Locations</a></li>
+	<li><a href="/about/contacts" title="Contact Information">Contact Information</a></li>
+	<li><a href="/about/news" title="News">News<span class="sub">&raquo;</span></a>
+		<ul>
+		<li><a href="/about/news" title="Press Releases">Press Releases</a></li>
+		<li><a href="/about/news/articles" title="Articles">Articles</a></li>
+        <li><a href="/about/news/newsletters" title="Newsletters">Newsletters</a></li>
+		<li><a href="/investors/news_events" title="Investor News/Events">Investor News/Events</a></li>
+		<li><a href="/about/news/epresskit" title="Electronic press kit">E-Press Kit</a></li>
+		</ul></li>
+	<li><a href="/careers" title="Careers">Careers</a></li>
+	<li><a href="/mydata" title="My PLX Access / Register">My PLX Access / Register</a></li>		
+	</ul></li>
+</ul>	
+	<div id="main-search">
+		<!-- Google CSE Search Box Begins  -->
+<form action="/search" id="searchbox_006999405495684679887:pyyq-7w9gaw">
+<input type="hidden" name="cx" value="006999405495684679887:pyyq-7w9gaw" />
+<input type="hidden" name="cof" value="FORID:11" />
+<input type="text" name="q" size="25" onfocus="this.select();" />&nbsp;<input type="image" name="sa" src="/images/go.gif" />
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_006999405495684679887%3Apyyq-7w9gaw&amp;lang=en"></script>
+<!-- Google CSE Search Box Ends -->	</div>
+</div>
+
+<div id="content">
+	
+	<div id="flashdiv">
+		<!-- Error Code: 6 --><p class="error">Sorry, you have to be logged in to download this document.</p>	</div>
+	
+</div><!-- EOF Content -->
+
+<div id="footer">
+	<p class="float-right mydata"><a href="/mydata">My Data (plxtech.com Registration)</a></p>
+<p>&copy; 2010 <a href="/copyright" title="Copyright">Copyright</a> | <a href="/privacy" title="Privacy Policy">Privacy Policy</a> | <a href="/sitemap" title="Site Map">Site Map</a></p></div>
+
+</div> <!-- EOF Container -->
+
+</body>
+</html>

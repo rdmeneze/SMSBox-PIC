@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "crcGen", "crcGen\crcGen.vcproj", "{501D8FC3-5623-491D-9945-E1A5F568C3C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{501D8FC3-5623-491D-9945-E1A5F568C3C8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{501D8FC3-5623-491D-9945-E1A5F568C3C8}.Debug|Win32.Build.0 = Debug|Win32
+		{501D8FC3-5623-491D-9945-E1A5F568C3C8}.Release|Win32.ActiveCfg = Release|Win32
+		{501D8FC3-5623-491D-9945-E1A5F568C3C8}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

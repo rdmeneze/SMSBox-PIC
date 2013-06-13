@@ -1,0 +1,716 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+!_TAG_REVISION_NAME	MCHPTags	//
+!_TAG_REVISION_VERSION	6.0.1	//
+AT45DBXX	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom.h	7;"	d	line:7
+AT45DBXX_Init	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	142;"	f	line:142	signature:( void )
+AT45DBXX_Init	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.h	43;"	p	line:43	signature:( void )
+AT45DBXX_Read	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	150;"	f	line:150	signature:( BYTE * bufOut, DWORD addr, BYTE len )
+AT45DBXX_Read	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.h	53;"	p	line:53	signature:( BYTE * bufOut, DWORD addr, BYTE len )
+AT45DBXX_Read	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.h	55;"	p	line:55	signature:( BYTE * bufOut, DWORD addr, WORD len )
+AT45DBXX_Write	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	192;"	f	line:192	signature:( BYTE * bufIn, DWORD addr, BYTE len )
+AT45DBXX_Write	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.h	65;"	p	line:65	signature:( BYTE * bufIn, DWORD addr, BYTE len )
+AT45DBXX_Write	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.h	67;"	p	line:67	signature:( BYTE * bufIn, DWORD addr, WORD len )
+AT_45_PAGE_SIZE::264L	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.h	37;"	d	line:37
+BIT0::(1<<0)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\defs.h	23;"	d	line:23
+BIT1::(1<<1)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\defs.h	24;"	d	line:24
+BIT2::(1<<2)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\defs.h	25;"	d	line:25
+BIT3::(1<<3)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\defs.h	26;"	d	line:26
+BIT4::(1<<4)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\defs.h	27;"	d	line:27
+BIT5::(1<<5)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\defs.h	28;"	d	line:28
+BIT6::(1<<6)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\defs.h	29;"	d	line:29
+BIT7::(1<<7)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\defs.h	30;"	d	line:30
+BIT_CLEAR::(X,BIT)((X&=~(1<<BIT)))	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\funcoes.h	23;"	d	line:23
+BIT_IS_NOT_SET::(X,BIT)((X&(1<<BIT))==0)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\funcoes.h	21;"	d	line:21
+BIT_IS_SET::(X,BIT)((X&(1<<BIT))!=0)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\funcoes.h	20;"	d	line:20
+BIT_SET::(X,BIT)((X|=(1<<BIT)))	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\funcoes.h	22;"	d	line:22
+BOARD_VERSION::0x02000000	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\version.h	10;"	d	line:10
+BOOT_LDR_CRC32	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom_loc.c	21;"	v	line:21
+BOOT_LDR_CRC32_ADDR::16	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom_loc.h	52;"	d	line:52
+BOOT_LDR_PCK_CNTRL	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom_loc.c	20;"	v	line:20
+BOOT_LDR_PCK_CNTRL_ADDR::12	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom_loc.h	51;"	d	line:51
+BOOT_LDR_ST	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom_loc.c	19;"	v	line:19
+BOOT_LDR_ST_ADDR::11	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom_loc.h	50;"	d	line:50
+BOOT_LOADER_CHANGE_FW::(0)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootstatus.h	11;"	d	line:11
+BOOT_LOADER_E2PROM_ERR::1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader.h	8;"	d	line:8
+BOOT_LOADER_FLASH_ERR::2	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader.h	9;"	d	line:9
+BOOT_LOADER_FLASH_FRAME_TOO_LONG::3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader.h	10;"	d	line:10
+BOOT_LOADER_FRAME_LEN::64	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootstatus.h	7;"	d	line:7
+BOOT_LOADER_LEN::(PROGRAM_MEMORY_BYTES+(PROGRAM	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootstatus.h	8;"	d	line:8
+BOOT_LOADER_OK::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader.h	7;"	d	line:7
+BOOT_LOADER_VERSION::0x00000100	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\version.h	21;"	d	line:21
+BYTE	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\defs.h	6;"	t	line:6
+BitCount	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\uartdata.asm	5;"	v	line:5
+BoardVersion	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\version.c	9;"	v	line:9
+BootLoaderVersion	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\version.c	15;"	v	line:15
+CARD_OFFSET::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\simcardcontrol.h	15;"	d	line:15
+CHAR	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\defs.h	12;"	t	line:12
+CHAR_DELAY::64L	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	98;"	d	line:98	file:
+CMD_FIELD::3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\SerialPC.h	42;"	d	line:42
+CMD_PARAM::(CMD_FIELD+1)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\SerialPC.h	43;"	d	line:43
+CPU_DISABLEALLInt_CODE	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\CPU_disableAll_Int.asm	34;"	l	line:34
+CPU_DisableAllInt	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\CPU_disableAll_Int.asm	36;"	l	line:36
+CPU_DisableAllInt	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\cpu.h	16;"	p	line:16	signature:( void )
+CPU_EnableAllInt	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\CPU_EnableAll_Int.asm	36;"	l	line:36
+CPU_EnableAllInt	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\cpu.h	21;"	p	line:21	signature:( void )
+CPU_EnableAllInt_CODE	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\CPU_EnableAll_Int.asm	34;"	l	line:34
+CPU_Reset	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\cpu.c	24;"	f	line:24	signature:( void )
+CPU_Reset	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\cpu.h	31;"	p	line:31	signature:( void )
+CPU_RstWDT	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\cpu.c	13;"	f	line:13	signature:( void )
+CPU_RstWDT	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\cpu.h	26;"	p	line:26	signature:( void )
+ChangeFirmware	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\ChangeFirmware.c	31;"	f	line:31	signature:( void )
+ChangeFirmware	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\ChangeFirmware.h	19;"	p	line:19	signature:( void )
+ChangeLeds	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\main.c	134;"	f	line:134	signature:( void )
+ChangeLeds	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\main.c	54;"	p	line:54	file:	signature:( void )
+CheckBootLoader	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader.c	14;"	f	line:14	signature:( void )
+CheckBootLoader	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader.h	16;"	p	line:16	signature:( void )
+CheckLed	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.c	66;"	f	line:66	signature:( void )
+CheckLed	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.h	19;"	p	line:19	signature:( void )
+CleanStatus	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\status.c	19;"	f	line:19	signature:( WORD st )
+CleanStatus	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\status.h	27;"	p	line:27	signature:( WORD st )
+ClearCSSWSPI	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\clrcsspi.c	10;"	f	line:10	signature:(void)
+D1TCYXCODE	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\d1tcyx.asm	3;"	l	line:3
+D1TCYXCODE	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\d4tcyx.asm	35;"	l	line:35
+D1x	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\d1tcyx.asm	12;"	l	line:12
+D4x	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\d4tcyx.asm	40;"	l	line:40
+DATA_FIELD::3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\SerialPC.h	41;"	d	line:41
+DELAY_INT_CHAR::10L	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	99;"	d	line:99	file:
+DIR_IN::1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\defs.h	15;"	d	line:15
+DIR_OUT::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\defs.h	16;"	d	line:16
+DLE::0x10	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	95;"	d	line:95	file:
+DLE_CHAR::0x20	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	96;"	d	line:96	file:
+DWORD	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\defs.h	8;"	t	line:8
+DWTESTE	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom_loc.c	22;"	v	line:22
+DW_TESTE_ADDR::20	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom_loc.h	53;"	d	line:53
+Delay1TCYx	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\Delay1TCYx.h	9;"	p	line:9	signature:(PARAM_SCLASS unsigned char)
+Delay1TCYx	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\d1tcyx.asm	6;"	l	line:6
+Delay4TCYx	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\Delay4TCYx.h	9;"	p	line:9	signature:(PARAM_SCLASS unsigned char)
+Delay4TCYx	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\d4tcyx.asm	37;"	l	line:37
+DelayRXBitUART	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\sw_serial_delays.c	36;"	f	line:36	signature:( void )
+DelayRXBitUART	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\sw_serial_delays.h	8;"	p	line:8	signature:( void )
+DelayRXHalfBitUART	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\sw_serial_delays.c	30;"	f	line:30	signature:( void )
+DelayRXHalfBitUART	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\sw_serial_delays.h	7;"	p	line:7	signature:( void )
+DelayTXBitUART	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\sw_serial_delays.c	13;"	f	line:13	signature:( void )
+DelayTXBitUART	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\sw_serial_delays.h	6;"	p	line:6	signature:( void )
+ED_FIELD::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\SerialPC.h	38;"	d	line:38
+EEDATA_SIZE::(0)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\processor.h	31;"	d	line:31
+EEDATA_SIZE::(1024L)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\processor.h	27;"	d	line:27
+EN_SIM_CARD_00::LATAbits.LATA0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	69;"	d	line:69
+EN_SIM_CARD_00_DIR::TRISAbits.TRISA0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	70;"	d	line:70
+EN_SIM_CARD_01::LATAbits.LATA1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	71;"	d	line:71
+EN_SIM_CARD_01_DIR::TRISAbits.TRISA1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	72;"	d	line:72
+EN_SIM_CARD_02::LATAbits.LATA2	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	73;"	d	line:73
+EN_SIM_CARD_02_DIR::TRISAbits.TRISA2	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	74;"	d	line:74
+EN_SIM_CARD_03::LATAbits.LATA3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	75;"	d	line:75
+EN_SIM_CARD_03_DIR::TRISAbits.TRISA3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	76;"	d	line:76
+EN_SIM_CARD_04::LATAbits.LATA4	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	77;"	d	line:77
+EN_SIM_CARD_04_DIR::TRISAbits.TRISA4	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	78;"	d	line:78
+EN_SIM_CARD_05::LATAbits.LATA5	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	79;"	d	line:79
+EN_SIM_CARD_05_DIR::TRISAbits.TRISA5	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	80;"	d	line:80
+EN_SIM_CARD_06::LATBbits.LATB1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	81;"	d	line:81
+EN_SIM_CARD_06_DIR::TRISBbits.TRISB1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	82;"	d	line:82
+EN_SIM_CARD_07::LATBbits.LATB2	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	83;"	d	line:83
+EN_SIM_CARD_07_DIR::TRISBbits.TRISB2	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	84;"	d	line:84
+EN_SIM_CARD_08::LATBbits.LATB3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	85;"	d	line:85
+EN_SIM_CARD_08_DIR::TRISBbits.TRISB3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	86;"	d	line:86
+EN_SIM_CARD_09::LATBbits.LATB4	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	87;"	d	line:87
+EN_SIM_CARD_09_DIR::TRISBbits.TRISB4	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	88;"	d	line:88
+EN_SIM_CARD_10::LATBbits.LATB5	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	89;"	d	line:89
+EN_SIM_CARD_10_DIR::TRISBbits.TRISB5	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	90;"	d	line:90
+EN_SIM_CARD_11::LATDbits.LATD0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	91;"	d	line:91
+EN_SIM_CARD_11_DIR::TRISDbits.TRISD0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	92;"	d	line:92
+EN_SIM_CARD_12::LATDbits.LATD1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	93;"	d	line:93
+EN_SIM_CARD_12_DIR::TRISDbits.TRISD1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	94;"	d	line:94
+EN_SIM_CARD_13::LATDbits.LATD2	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	95;"	d	line:95
+EN_SIM_CARD_13_DIR::TRISDbits.TRISD2	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	96;"	d	line:96
+EN_SIM_CARD_14::LATDbits.LATD3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	97;"	d	line:97
+EN_SIM_CARD_14_DIR::TRISDbits.TRISD3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	98;"	d	line:98
+EN_SIM_CARD_15::LATDbits.LATD4	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	99;"	d	line:99
+EN_SIM_CARD_15_DIR::TRISDbits.TRISD4	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	100;"	d	line:100
+EO_FIELD::1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\SerialPC.h	39;"	d	line:39
+ERROR_SUCCESS::(0)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\defs.h	32;"	d	line:32
+ERR_OK::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\defs.h	21;"	d	line:21
+ETX::0x03	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	94;"	d	line:94	file:
+EnviaCMD_MODEM	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\SerialPC.h	85;"	p	line:85	signature:( BYTE * buffer, int len )
+EnviaCMD_MODEM	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	494;"	f	line:494	signature:( BYTE * buffer, int len )
+ErasePage	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\prgmem_access.c	10;"	p	line:10	file:	signature:( WORD page )
+ErasePage	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\prgmem_access.c	178;"	f	line:178	signature:( WORD page )
+FALSE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\defs.h	19;"	d	line:19
+FEE_BOOTLOADER::(FEE_TESTE_ADDR+sizeof(DWORD))	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom_loc.h	15;"	d	line:15
+FEE_BOOTLOADER_LEN::BOOT_LOADER_LEN	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom_loc.h	16;"	d	line:16
+FEE_CONFIG_STR::0x00000000	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom_loc.h	7;"	d	line:7
+FEE_CONFIG_STR_LEN::11L	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom_loc.h	8;"	d	line:8
+FEE_FAC_SETTINGS::(FEE_CONFIG_STR+FEE_CONFIG_STR	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom_loc.h	9;"	d	line:9
+FEE_FAC_SETTINGS_LEN::32L	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom_loc.h	10;"	d	line:10
+FEE_LOG_ADDR::(FEE_FAC_SETTINGS+FEE_FAC_SETT	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom_loc.h	11;"	d	line:11
+FEE_MEM_IN_USE::((FEE_TESTE_ADDR+FEE_TESTE_ADD	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom_loc.h	18;"	d	line:18
+FEE_NLOG_EVNT::N_LOG_EVNT	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom_loc.h	12;"	d	line:12
+FEE_TESTE_ADDR::(FEE_LOG_ADDR+FEE_NLOG_EVNT*si	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom_loc.h	13;"	d	line:13
+FEE_TESTE_ADDR_LEN::sizeof(DWORD)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom_loc.h	14;"	d	line:14
+FLASH_CAPACITY::((4L*1024L*1024L)/8L)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom.h	10;"	d	line:10
+FLASH_CMD_AUTO_PAGE_REWRITE_BUFFER1::0x58	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	117;"	d	line:117	file:
+FLASH_CMD_AUTO_PAGE_REWRITE_BUFFER1_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	118;"	d	line:118	file:
+FLASH_CMD_AUTO_PAGE_REWRITE_BUFFER2::0x59	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	119;"	d	line:119	file:
+FLASH_CMD_AUTO_PAGE_REWRITE_BUFFER2_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	120;"	d	line:120	file:
+FLASH_CMD_BLOCK_ERASE::0x50	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	76;"	d	line:76	file:
+FLASH_CMD_BLOCK_ERASE_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	77;"	d	line:77	file:
+FLASH_CMD_BUFFER1_2_MAINMEMORY_PAGE_ERASE::0x83	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	68;"	d	line:68	file:
+FLASH_CMD_BUFFER1_2_MAINMEMORY_PAGE_ERASE_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	69;"	d	line:69	file:
+FLASH_CMD_BUFFER1_2_MAINMEMORY_PAGE_NOERASE::0x88	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	72;"	d	line:72	file:
+FLASH_CMD_BUFFER1_RD::0xd4	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	58;"	d	line:58	file:
+FLASH_CMD_BUFFER1_RD_DMY_BYTE::1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	59;"	d	line:59	file:
+FLASH_CMD_BUFFER1_WR::0x84	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	64;"	d	line:64	file:
+FLASH_CMD_BUFFER1_WR_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	65;"	d	line:65	file:
+FLASH_CMD_BUFFER2_2_MAINMEMORY_PAGE_ERASE::0x86}	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	70;"	d	line:70	file:
+FLASH_CMD_BUFFER2_2_MAINMEMORY_PAGE_ERASE_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	71;"	d	line:71	file:
+FLASH_CMD_BUFFER2_2_MAINMEMORY_PAGE_NOERASE_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	73;"	d	line:73	file:
+FLASH_CMD_BUFFER2_RD::0xd6	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	60;"	d	line:60	file:
+FLASH_CMD_BUFFER2_RD_DMY_BYTE::1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	61;"	d	line:61	file:
+FLASH_CMD_BUFFER2_WR::0x87	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	66;"	d	line:66	file:
+FLASH_CMD_BUFFER2_WR_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	67;"	d	line:67	file:
+FLASH_CMD_CHIP_ERASE::0xC7	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	80;"	d	line:80	file:
+FLASH_CMD_CHIP_ERASE_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	81;"	d	line:81	file:
+FLASH_CMD_DEEP_PWR_DOWN::0xB9	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	121;"	d	line:121	file:
+FLASH_CMD_DEEP_PWR_DOWN_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	122;"	d	line:122	file:
+FLASH_CMD_HIGH_FREQ_CONTINUOUS_ARRAY_RD::0x0b	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	52;"	d	line:52	file:
+FLASH_CMD_HIGH_FREQ_CONTINUOUS_ARRAY_RD_DMY_BYTE::1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	53;"	d	line:53	file:
+FLASH_CMD_LEGACY_CONTINUOUS_ARRAY_RD::0xe8	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	48;"	d	line:48	file:
+FLASH_CMD_LEGACY_CONTINUOUS_ARRAY_RD_DMY_BYTE::4	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	49;"	d	line:49	file:
+FLASH_CMD_LOW_FREQ_BUFFER1_RD::0xd1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	54;"	d	line:54	file:
+FLASH_CMD_LOW_FREQ_BUFFER1_RD_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	55;"	d	line:55	file:
+FLASH_CMD_LOW_FREQ_BUFFER2_RD::0xd3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	56;"	d	line:56	file:
+FLASH_CMD_LOW_FREQ_BUFFER2_RD_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	57;"	d	line:57	file:
+FLASH_CMD_LOW_FREQ_CONTINUOUS_ARRAY_RD::0x03	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	50;"	d	line:50	file:
+FLASH_CMD_LOW_FREQ_CONTINUOUS_ARRAY_RD_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	51;"	d	line:51	file:
+FLASH_CMD_MAIN_MEM_PAGE_2_BUFFER1_COMPARE::0x60	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	113;"	d	line:113	file:
+FLASH_CMD_MAIN_MEM_PAGE_2_BUFFER1_COMPARE_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	114;"	d	line:114	file:
+FLASH_CMD_MAIN_MEM_PAGE_2_BUFFER1_TRANSFER::0x53	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	109;"	d	line:109	file:
+FLASH_CMD_MAIN_MEM_PAGE_2_BUFFER1_TRANSFER_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	110;"	d	line:110	file:
+FLASH_CMD_MAIN_MEM_PAGE_2_BUFFER2_COMPARE::0x61	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	115;"	d	line:115	file:
+FLASH_CMD_MAIN_MEM_PAGE_2_BUFFER2_COMPARE_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	116;"	d	line:116	file:
+FLASH_CMD_MAIN_MEM_PAGE_2_BUFFER2_TRANSFER::0x55	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	111;"	d	line:111	file:
+FLASH_CMD_MAIN_MEM_PAGE_2_BUFFER2_TRANSFER_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	112;"	d	line:112	file:
+FLASH_CMD_MAIN_MEM_PAGE_RD::0xd2	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	46;"	d	line:46	file:
+FLASH_CMD_MAIN_MEM_PAGE_RD_DMY_BYTE::4	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	47;"	d	line:47	file:
+FLASH_CMD_MMPage_2_BUFFER1::0x82	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	82;"	d	line:82	file:
+FLASH_CMD_MMPage_2_BUFFER1_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	83;"	d	line:83	file:
+FLASH_CMD_MMPage_2_BUFFER2::0x85	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	84;"	d	line:84	file:
+FLASH_CMD_MMPage_2_BUFFER2_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	85;"	d	line:85	file:
+FLASH_CMD_PAGE_ERASE::0x81	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	74;"	d	line:74	file:
+FLASH_CMD_PAGE_ERASE_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	75;"	d	line:75	file:
+FLASH_CMD_READ_DEVICE_ID::0x9F	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	127;"	d	line:127	file:
+FLASH_CMD_READ_DEVICE_ID_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	128;"	d	line:128	file:
+FLASH_CMD_READ_STATUS_REG::0xD7	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	125;"	d	line:125	file:
+FLASH_CMD_READ_STATUS_REG_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	126;"	d	line:126	file:
+FLASH_CMD_RESUME_DEEP_PWR_DOWN::0xAB	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	123;"	d	line:123	file:
+FLASH_CMD_RESUME_DEEP_PWR_DOWN_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	124;"	d	line:124	file:
+FLASH_CMD_SECTOR_ERASE::0x7C	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	78;"	d	line:78	file:
+FLASH_CMD_SECTOR_ERASE_DMY_BYTE::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	79;"	d	line:79	file:
+FOSC::XTAL*PLL	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\processor.h	34;"	d	line:34
+FW_VERSION::0x02000000	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\version.h	18;"	d	line:18
+FirmwareVersion	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\version.c	11;"	v	line:11
+FirmwareVersion	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\version.c	13;"	v	line:13
+FlashInit	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom.c	33;"	f	line:33	signature:( void )
+FlashInit	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom.h	16;"	p	line:16	signature:( void )
+Flash_Read	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom.c	49;"	f	line:49	signature:( BYTE * bufOut, DWORD addr, BYTE len )
+Flash_Read	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom.h	25;"	p	line:25	signature:( BYTE * bufOut, DWORD addr, BYTE len )
+Flash_Test	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom.c	27;"	p	line:27	file:	signature:( void )
+Flash_Test	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom.c	91;"	f	line:91	signature:( void )
+Flash_Write	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom.c	70;"	f	line:70	signature:( BYTE * bufIn, DWORD addr, BYTE len )
+Flash_Write	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom.h	33;"	p	line:33	signature:( BYTE * bufIn, DWORD addr, BYTE len )
+GET_VEC_NUM_MEMBERS::(x)(sizeof(x)/sizeof(x[0]))	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\funcoes.h	6;"	d	line:6
+GSM_AC_SIM_PRES::LATDbits.LATD7	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	17;"	d	line:17
+GSM_AC_SIM_PRES_DIR::TRISDbits.TRISD7	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	18;"	d	line:18
+GSM_PWRKEY::LATDbits.LATD5	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	13;"	d	line:13
+GSM_PWRKEY_DIR::TRISDbits.TRISD5	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	14;"	d	line:14
+GSM_STATUS::PORTDbits.RD6	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	15;"	d	line:15
+GSM_STATUS_DIR::TRISDbits.TRISD6	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	16;"	d	line:16
+GetBoardVersion	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\version.c	30;"	f	line:30	signature:( void )
+GetBoardVersion	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\version.h	27;"	p	line:27	signature:( void )
+GetBootLoaderVersion	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\version.c	54;"	f	line:54	signature:( void )
+GetBootLoaderVersion	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\version.h	39;"	p	line:39	signature:( void )
+GetCalcCRC32	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader.c	70;"	f	line:70	signature:( void )
+GetCalcCRC32	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader.h	36;"	p	line:36	signature:( void )
+GetChar	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\readuart.asm	50;"	l	line:50
+GetFirmwareVersion	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\version.c	42;"	f	line:42	signature:( void )
+GetFirmwareVersion	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\version.h	33;"	p	line:33	signature:( void )
+GetID	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\SerialPC.h	72;"	p	line:72	signature:( void )
+GetID	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\status.c	31;"	f	line:31	signature:( void )
+GetID	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\status.h	39;"	p	line:39	signature:( void )
+GetSerialNumber	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\serialNumber.c	13;"	f	line:13	signature:( void )
+GetSerialNumber	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\serialNumber.h	11;"	p	line:11	signature:( void )
+GetStatus	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\status.c	25;"	f	line:25	signature:(void)
+GetStatus	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\status.h	33;"	p	line:33	signature:(void)
+GetTickCount	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	106;"	f	line:106	signature:( void )
+GetTickCount	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.h	26;"	p	line:26	signature:( void )
+GetTimer	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	118;"	f	line:118	signature:( DWORD dwTime )
+GetTimer	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.h	33;"	p	line:33	signature:( DWORD dwTime )
+GotoResetVec::_asm	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\vectors.h	8;"	d	line:8
+GotoUserProgram::_asm	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\vectors.h	13;"	d	line:13
+HALF_BIT_UART::(((((FOSC/4)/(SWBAUD))+1)/2)-9	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\sw_serial_delays.c	9;"	d	line:9	file:
+HIBYTE::(x)((x)/(256L))	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\funcoes.h	11;"	d	line:11
+HIGH_ISR::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\interrupt.h	13;"	d	line:13
+HINIBBLE::(x)((x)/(16L))	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\funcoes.h	8;"	d	line:8
+HIWORD::(x)((x)/(65536L))	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\funcoes.h	14;"	d	line:14
+INT	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\defs.h	11;"	t	line:11
+ISR_HANDLER_PTR	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\interrupt.h	15;"	t	line:15
+IncTickCount	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	112;"	f	line:112	signature:( void )
+IncTickCount	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.h	60;"	p	line:60	signature:( void )
+InitSimCards	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\simcardcontrol.c	9;"	f	line:9	signature:( void )
+InitSimCards	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\simcardcontrol.h	24;"	p	line:24	signature:( void )
+InitTimer	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	73;"	f	line:73	signature:( void )
+InitTimer	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.h	20;"	p	line:20	signature:( void )
+InitTimer0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\Timer0.h	4;"	p	line:4	signature:( void )
+InitTimer0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer0.c	5;"	f	line:5	signature:( void )
+InterruptHandler	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\interrupt.c	11;"	p	line:11	file:	signature:( void )
+InterruptHandler	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\interrupt.c	49;"	f	line:49	signature:( void )
+InterruptHandlerLow	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\interrupt.c	12;"	p	line:12	file:	signature:( void )
+InterruptHandlerLow	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\interrupt.c	67;"	f	line:67	signature:( void )
+IsConnected	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\SerialPC.h	78;"	p	line:78	signature:( void )
+IsConnected	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	488;"	f	line:488	signature:( void )
+IsTimerTimeOut	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	162;"	f	line:162	signature:( TIMER_HANDLE handle )
+IsTimerTimeOut	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.h	55;"	p	line:55	signature:( TIMER_HANDLE handle )
+LED::LATCbits.LATC0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	21;"	d	line:21
+LED_DIR::TRISCbits.TRISC0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	22;"	d	line:22
+LEN_FIELD::2	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\SerialPC.h	40;"	d	line:40
+LOBYTE::(x)((BYTE)(x))	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\funcoes.h	12;"	d	line:12
+LOG_LEVEL	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom_loc.c	17;"	v	line:17
+LOG_LEVEL_ADDR::8	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom_loc.h	48;"	d	line:48
+LOG_PTR_END	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom_loc.c	16;"	v	line:16
+LOG_PTR_END_ADDR::4	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom_loc.h	47;"	d	line:47
+LOG_PTR_STA	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom_loc.c	15;"	v	line:15
+LOG_PTR_STA_ADDR::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom_loc.h	46;"	d	line:46
+LOG_STAMP	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom_loc.c	18;"	v	line:18
+LOG_STAMP_ADDR::9	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom_loc.h	49;"	d	line:49
+LONIBBLE::(x)((BYTE)((x)&(0x0F)))	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\funcoes.h	9;"	d	line:9
+LOWORD::(x)((WORD)(x))	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\funcoes.h	15;"	d	line:15
+LOW_ISR::1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\interrupt.h	12;"	d	line:12
+LedInit	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.c	42;"	f	line:42	signature:( void )
+LedInit	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.h	9;"	p	line:9	signature:( void )
+LedSetState	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.c	60;"	f	line:60	signature:( BYTE bState )
+LedSetState	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.h	14;"	p	line:14	signature:( BYTE bState )
+MAKELONG::(x,y)((DWORD)((DWORD)(y*65536L	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\funcoes.h	18;"	d	line:18
+MAKEWORD::(x,y)((WORD)((WORD)(y*256L)+x)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\funcoes.h	17;"	d	line:17
+MAX_TENT::16	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	34;"	d	line:34	file:
+MEM_IN_USE::NEXT_FREE_ADDR	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom_loc.h	56;"	d	line:56
+MODEM_BAUDRATE::9600L	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\processor.h	13;"	d	line:13
+MakeHeader	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	149;"	p	line:149	file:	signature:( BYTE * bufOut, BYTE bLen, BYTE bIDDest, BYTE bCmd )
+MakeHeader	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	668;"	f	line:668	signature:( BYTE * bufOut, BYTE bLen, BYTE bIDDest, BYTE bCmd )
+NCARD::16	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\simcardcontrol.h	14;"	d	line:14
+NEXT_FREE_ADDR::28	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom_loc.h	55;"	d	line:55
+NSTATE::((_END_ST_LIST-_INIT_ST_LIST)-	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\status.h	15;"	d	line:15
+NTIMER::32	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	32;"	d	line:32	file:
+OpenSWSPI	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\opensspi.c	12;"	f	line:12	signature:(void)
+OpenUART	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\openuart.asm	19;"	l	line:19
+PARAM_SCLASS::auto	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\Delay1TCYx.h	6;"	d	line:6
+PARAM_SCLASS::auto	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\Delay4TCYx.h	6;"	d	line:6
+PC_RXD::PORTBbits.RB0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	7;"	d	line:7
+PC_RXD_DIR::TRISBbits.TRISB0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	8;"	d	line:8
+PC_TXD::LATCbits.LATC1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	9;"	d	line:9
+PC_TXD_DIR::TRISCbits.TRISC1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	10;"	d	line:10
+PLL::1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\processor.h	16;"	d	line:16
+PRGMEM_WRITE_BLOCK_SIZE::64L	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\processor.h	9;"	d	line:9
+PROGRAM_MEMORY_BYTES::(PROGRAM_MEMORY_WORDS*2)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\processor.h	26;"	d	line:26
+PROGRAM_MEMORY_BYTES::(PROGRAM_MEMORY_WORDS*2)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\processor.h	30;"	d	line:30
+PROGRAM_MEMORY_WORDS::(32*1024L*1024L)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\processor.h	25;"	d	line:25
+PROGRAM_MEMORY_WORDS::(64*1024L*1024L)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\processor.h	29;"	d	line:29
+PULSE_COM_PC::1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.c	11;"	d	line:11	file:
+PULSE_MODEM_RDY::2	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.c	12;"	d	line:12	file:
+PULSE_RST_BOR::3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.c	13;"	d	line:13	file:
+PULSE_RST_LVD::5	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.c	15;"	d	line:15	file:
+PULSE_RST_WDT::4	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.c	14;"	d	line:14	file:
+PULSE_TIME::150	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.c	10;"	d	line:10	file:
+PVOID	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\defs.h	13;"	t	line:13
+PageWrite	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\prgmem_access.c	66;"	f	line:66	signature:( WORD page, BYTE pageOffSet, BYTE * buf, BYTE len )
+PageWrite	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\prgmem_access.c	9;"	p	line:9	file:	signature:( WORD page, BYTE pageOffSet, BYTE * buf, BYTE len )
+PageWriteMainMemo	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	136;"	p	line:136	file:	signature:(WORD page,WORD p_addr,BYTE num,BYTE *dat)
+PageWriteMainMemo	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	283;"	f	line:283	signature:(WORD page,WORD p_addr,BYTE num,BYTE *dat)
+ProcessaCMD_BOOTLOADER_CHANGEFW	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	146;"	p	line:146	file:	signature:( BYTE * buffer )
+ProcessaCMD_BOOTLOADER_CHANGEFW	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	651;"	f	line:651	signature:( BYTE * buffer )
+ProcessaCMD_BOOTLOADER_GETCRC32	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	145;"	p	line:145	file:	signature:( BYTE * buffer )
+ProcessaCMD_BOOTLOADER_GETCRC32	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	628;"	f	line:628	signature:( BYTE * buffer )
+ProcessaCMD_BOOTLOADER_UPLOAD_FW	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	144;"	p	line:144	file:	signature:( BYTE * buffer )
+ProcessaCMD_BOOTLOADER_UPLOAD_FW	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	594;"	f	line:594	signature:( BYTE * buffer )
+ProcessaCMD_HELLO	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	140;"	p	line:140	file:	signature:( BYTE * buffer )
+ProcessaCMD_HELLO	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	409;"	f	line:409	signature:( BYTE * buffer )
+ProcessaCMD_SONDA	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	141;"	p	line:141	file:	signature:( BYTE * buffer )
+ProcessaCMD_SONDA	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	523;"	f	line:523	signature:( BYTE * buffer )
+ProcessaCMD_STATUS	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	142;"	p	line:142	file:	signature:( BYTE * buffer )
+ProcessaCMD_STATUS	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	541;"	f	line:541	signature:( BYTE * buffer )
+ProcessaCMD_VERSION	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	143;"	p	line:143	file:	signature:( BYTE * buffer )
+ProcessaCMD_VERSION	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	561;"	f	line:561	signature:( BYTE * buffer )
+ProcessaPacotes	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\SerialPC.h	66;"	p	line:66	signature:( void )
+ProcessaPacotes	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	311;"	f	line:311	signature:( void )
+ProcessaProtocolo	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\SerialPC.h	54;"	p	line:54	signature:(BYTE bData)
+ProcessaProtocolo	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	173;"	f	line:173	signature:( BYTE bData )
+RM_HIGH_INTERRUPT_VECTOR::0x000008	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\vectors.h	24;"	d	line:24
+RM_LOW_INTERRUPT_VECTOR::0x000018	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\vectors.h	25;"	d	line:25
+RM_RESET_VECTOR::0x000000	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\vectors.h	19;"	d	line:19
+RM_RESET_VECTOR::0x004000	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\vectors.h	17;"	d	line:17
+RM_USER_PROGRAM::0x004000	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\vectors.h	22;"	d	line:22
+RND::6	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\c018i.c	29;"	d	line:29	file:
+RX_BIT_UART::(((((FOSC/2)/(SWBAUD))+1)/2)-1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\sw_serial_delays.c	10;"	d	line:10	file:
+ReadSWSPI	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\rdsspi.c	3;"	f	line:3	signature:( void )
+ReadUART	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\readuart.asm	33;"	l	line:33
+ReleaseTimer	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	140;"	f	line:140	signature:( TIMER_HANDLE * handle )
+ReleaseTimer	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.h	48;"	p	line:48	signature:( TIMER_HANDLE * handle )
+RemapISR	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\interrupt.c	73;"	f	line:73	signature:( BYTE type, ISR_HANDLER_PTR isrFunc )
+RemapISR	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\interrupt.h	19;"	p	line:19	signature:( BYTE type, ISR_HANDLER_PTR* isrFunc )
+RemapInterruptHandler	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\interrupt.c	98;"	f	line:98	signature:( void )
+RemapInterruptHandler	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\interrupt.h	17;"	p	line:17	signature:( void )
+ResetCRC32	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader.c	76;"	f	line:76	signature:( void )
+ResetCRC32	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader.h	42;"	p	line:42	signature:( void )
+ResetSIMCARD	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\simcardcontrol.c	142;"	f	line:142	signature:( void )
+ResetSIMCARD	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\simcardcontrol.h	36;"	p	line:36	signature:( void )
+RestartTimer	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	184;"	f	line:184	signature:( TIMER_HANDLE handle, DWORD dwNewTime )
+RestartTimer	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.h	41;"	p	line:41	signature:( TIMER_HANDLE handle, DWORD dwNewTime )
+ResumeFactorySet	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom.c	101;"	f	line:101	signature:( void )
+ResumeFactorySet	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom.c	28;"	p	line:28	file:	signature:( void )
+SECOND_HIGH_ISR_VECTOR::0x001008	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\vectors.h	27;"	d	line:27
+SECOND_LOW_ISR_VECTOR::0x001018	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\vectors.h	28;"	d	line:28
+SERIAL_NUMBER	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom_loc.c	23;"	v	line:23
+SERIAL_NUMBER_ADDR::24	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom_loc.h	54;"	d	line:54
+SERVER_ID::0x00	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\SerialPC.h	45;"	d	line:45
+SIM_SEL::LATA	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	106;"	d	line:106
+SIM_SEL::LATA	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	120;"	d	line:120
+SIM_SEL_00::LATAbits.LATA0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	109;"	d	line:109
+SIM_SEL_00::LATAbits.LATA0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	123;"	d	line:123
+SIM_SEL_00_DIR::TRISAbits.TRISA0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	110;"	d	line:110
+SIM_SEL_00_DIR::TRISAbits.TRISA0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	124;"	d	line:124
+SIM_SEL_01::LATAbits.LATA1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	111;"	d	line:111
+SIM_SEL_01::LATAbits.LATA1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	125;"	d	line:125
+SIM_SEL_01_DIR::TRISAbits.TRISA1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	112;"	d	line:112
+SIM_SEL_01_DIR::TRISAbits.TRISA1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	126;"	d	line:126
+SIM_SEL_02::LATAbits.LATA2	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	113;"	d	line:113
+SIM_SEL_02::LATAbits.LATA2	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	127;"	d	line:127
+SIM_SEL_02_DIR::TRISAbits.TRISA2	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	114;"	d	line:114
+SIM_SEL_02_DIR::TRISAbits.TRISA2	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	128;"	d	line:128
+SIM_SEL_03::LATAbits.LATA3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	115;"	d	line:115
+SIM_SEL_03::LATAbits.LATA3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	129;"	d	line:129
+SIM_SEL_03_DIR::TRISAbits.TRISA3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	116;"	d	line:116
+SIM_SEL_03_DIR::TRISAbits.TRISA3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	130;"	d	line:130
+SIM_SEL_EN::LATAbits.LATA4	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	117;"	d	line:117
+SIM_SEL_EN::LATBbits.LATB2	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	131;"	d	line:131
+SIM_SEL_EN_DIR::TRISAbits.TRISA4	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	118;"	d	line:118
+SIM_SEL_EN_DIR::TRISBbits.TRISB2	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	132;"	d	line:132
+SIM_SEL_MASK::0x0F	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	107;"	d	line:107
+SIM_SEL_MASK::0x0F	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	121;"	d	line:121
+SIM_SEL_SHIFT::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	108;"	d	line:108
+SIM_SEL_SHIFT::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	122;"	d	line:122
+SONDA_TIMEOUT::5000L	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	102;"	d	line:102	file:
+STX::0x02	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	93;"	d	line:93	file:
+ST_COM_PC_OK::((WORD)(1))	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\status.h	8;"	d	line:8
+ST_DATA::1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	84;"	d	line:84	file:
+ST_DLE::7	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	90;"	d	line:90	file:
+ST_ED::2	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	85;"	d	line:85	file:
+ST_EO::3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	86;"	d	line:86	file:
+ST_ETX::6	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	89;"	d	line:89	file:
+ST_LEN::4	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	87;"	d	line:87	file:
+ST_LRC::5	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	88;"	d	line:88	file:
+ST_MODEM_RDY::((WORD)(1<<1))	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\status.h	9;"	d	line:9
+ST_RST_BOR::((WORD)(1<<2))	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\status.h	10;"	d	line:10
+ST_RST_LVD::((WORD)(1<<4))	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\status.h	12;"	d	line:12
+ST_RST_WDT::((WORD)(1<<3))	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\status.h	11;"	d	line:11
+ST_STX::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	83;"	d	line:83	file:
+SWBAUD::19200L	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\processor.h	11;"	d	line:11
+SW_CS_PIN::PORTCbits.RC2	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	45;"	d	line:45
+SW_CS_PIN::PORTCbits.RC2	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	54;"	d	line:54
+SW_CS_PIN::PORTCbits.RC3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	35;"	d	line:35
+SW_DIN_PIN::PORTCbits.RC4	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	37;"	d	line:37
+SW_DIN_PIN::PORTCbits.RC4	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	47;"	d	line:47
+SW_DIN_PIN::PORTCbits.RC5	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	56;"	d	line:56
+SW_DOUT_PIN::PORTCbits.RC4	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	58;"	d	line:58
+SW_DOUT_PIN::PORTCbits.RC5	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	49;"	d	line:49
+SW_DOUT_PIN::PORTCbits.RC6	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	39;"	d	line:39
+SW_SCK_PIN::PORTCbits.RC3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	51;"	d	line:51
+SW_SCK_PIN::PORTCbits.RC3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	60;"	d	line:60
+SW_SCK_PIN::PORTCbits.RC5	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	41;"	d	line:41
+SendBit	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\writuart.asm	43;"	l	line:43
+SendStart	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\writuart.asm	46;"	l	line:46
+SerialNumber	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\serialNumber.c	9;"	v	line:9
+SerialPCInit	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\SerialPC.h	59;"	p	line:59	signature:( void )
+SerialPCInit	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	152;"	f	line:152	signature:( void )
+SetSimCard	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\simcardcontrol.c	48;"	f	line:48	signature:( BYTE ID )
+SetSimCard	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\simcardcontrol.h	30;"	p	line:30	signature:( BYTE ID )
+SetStatus	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\status.c	13;"	f	line:13	signature:( WORD st )
+SetStatus	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\status.h	21;"	p	line:21	signature:( WORD st )
+StartChangeFirmware	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader.c	84;"	f	line:84	signature:( void )
+StartChangeFirmware	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader.h	22;"	p	line:22	signature:( void )
+T2POST_1_10::9	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	47;"	d	line:47	file:
+T2POST_1_11::10	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	48;"	d	line:48	file:
+T2POST_1_12::11	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	49;"	d	line:49	file:
+T2POST_1_13::12	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	50;"	d	line:50	file:
+T2POST_1_14::13	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	51;"	d	line:51	file:
+T2POST_1_15::14	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	52;"	d	line:52	file:
+T2POST_1_16::15	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	53;"	d	line:53	file:
+T2POST_1_1::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	38;"	d	line:38	file:
+T2POST_1_2::1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	39;"	d	line:39	file:
+T2POST_1_3::2	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	40;"	d	line:40	file:
+T2POST_1_4::3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	41;"	d	line:41	file:
+T2POST_1_5::4	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	42;"	d	line:42	file:
+T2POST_1_6::5	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	43;"	d	line:43	file:
+T2POST_1_7::6	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	44;"	d	line:44	file:
+T2POST_1_8::7	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	45;"	d	line:45	file:
+T2POST_1_9::8	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	46;"	d	line:46	file:
+T2PRE_1_16::3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	58;"	d	line:58	file:
+T2PRE_1_1::0	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	56;"	d	line:56	file:
+T2PRE_1_4::1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	57;"	d	line:57	file:
+TICK_VALUE::1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	35;"	d	line:35	file:
+TIMEOUT_COM_PC::(((CHAR_DELAY*11L*1000L)/SWBAU	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	100;"	d	line:100	file:
+TIMER_HANDLE::BYTE	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.h	13;"	d	line:13
+TIMER_NULL::(-1)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.h	15;"	d	line:15
+TIME_COM_PC::(TOTALTIME/4)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.c	8;"	d	line:8	file:
+TIME_IDLE::(TOTALTIME/2)	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.c	9;"	d	line:9	file:
+TOTALTIME::3000	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.c	7;"	d	line:7	file:
+TRIS_SW_CS_PIN::TRISCbits.TRISC2	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	46;"	d	line:46
+TRIS_SW_CS_PIN::TRISCbits.TRISC2	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	55;"	d	line:55
+TRIS_SW_CS_PIN::TRISCbits.TRISC3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	36;"	d	line:36
+TRIS_SW_DIN_PIN::TRISCbits.TRISC4	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	38;"	d	line:38
+TRIS_SW_DIN_PIN::TRISCbits.TRISC4	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	48;"	d	line:48
+TRIS_SW_DIN_PIN::TRISCbits.TRISC5	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	57;"	d	line:57
+TRIS_SW_DOUT_PIN::TRISCbits.TRISC4	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	59;"	d	line:59
+TRIS_SW_DOUT_PIN::TRISCbits.TRISC5	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	50;"	d	line:50
+TRIS_SW_DOUT_PIN::TRISCbits.TRISC6	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	40;"	d	line:40
+TRIS_SW_SCK_PIN::TRISCbits.TRISC3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	52;"	d	line:52
+TRIS_SW_SCK_PIN::TRISCbits.TRISC3	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	61;"	d	line:61
+TRIS_SW_SCK_PIN::TRISCbits.TRISC5	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	42;"	d	line:42
+TRUE::1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\defs.h	18;"	d	line:18
+TX_BIT_UART::(((((FOSC/2)/(SWBAUD))+1)/2)-1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\sw_serial_delays.c	8;"	d	line:8	file:
+Timer	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	62;"	s	line:62	file:
+UARTCODE	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\openuart.asm	10;"	l	line:10
+UARTCODE	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\readuart.asm	10;"	l	line:10
+UARTCODE	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\writuart.asm	14;"	l	line:14
+UARTDATA	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\uartdata.asm	3;"	l	line:3
+UINT	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\defs.h	10;"	t	line:10
+ULONG	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\defs.h	9;"	t	line:9
+UpLoad2Flash	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader.c	28;"	f	line:28	signature:( BYTE * buffer, BYTE len )
+UpLoad2Flash	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader.h	30;"	p	line:30	signature:( BYTE * buffer, BYTE len )
+VerifyStartUserProgram	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\ChangeFirmware.c	13;"	f	line:13	signature:( void )
+VerifyStartUserProgram	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\ChangeFirmware.h	24;"	p	line:24	signature:( void )
+WORD	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\defs.h	7;"	t	line:7
+WaitBusy	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	133;"	p	line:133	file:	signature:( void )
+WaitBusy	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	225;"	f	line:225	signature:( void )
+WaitChar	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\readuart.asm	43;"	l	line:43
+Write24BitAddr	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	135;"	p	line:135	file:	signature:(DWORD addr)
+Write24BitAddr	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	268;"	f	line:268	signature:(DWORD addr)
+WriteBuffer1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	137;"	p	line:137	file:	signature:(BYTE addr, BYTE num, BYTE *dat)
+WriteBuffer1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	302;"	f	line:302	signature:(BYTE addr, BYTE num, BYTE *dat)
+WriteBuffer1ToMainMemo	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	139;"	p	line:139	file:	signature:(WORD page)
+WriteBuffer1ToMainMemo	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	316;"	f	line:316	signature:(WORD page)
+WriteFlashAddr	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	134;"	p	line:134	file:	signature:(DWORD addr)
+WriteFlashAddr	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	251;"	f	line:251	signature:(DWORD addr)
+WriteMainMemoToBuffer1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	138;"	p	line:138	file:	signature:(WORD page)
+WriteMainMemoToBuffer1	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	328;"	f	line:328	signature:(WORD page)
+WriteSWSPI	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\wrtsspi.c	9;"	f	line:9	signature:( char output )
+WriteUART	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\writuart.asm	29;"	l	line:29
+XTAL::18432000	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\processor.h	15;"	d	line:15
+_E2PROM_LOC_	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom_loc.h	2;"	d	line:2
+_END_ST_LIST::13	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\status.h	13;"	d	line:13
+_INIT_ST_LIST::7	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\status.h	7;"	d	line:7
+__AT45DBXX__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.h	30;"	d	line:30
+__BOOTLOADER__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader.h	2;"	d	line:2
+__BOOT_STATUS_H__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootstatus.h	3;"	d	line:3
+__CHANGEFIRMWARE__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\ChangeFirmware.h	12;"	d	line:12
+__CPU__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\cpu.h	9;"	d	line:9
+__CRC32__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\crc32.h	2;"	d	line:2
+__DEFS__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\defs.h	2;"	d	line:2
+__DELAY1TCYX__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\Delay1TCYx.h	2;"	d	line:2
+__DELAY1TCYX__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\Delay4TCYx.h	2;"	d	line:2
+__E2PROM__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom.h	2;"	d	line:2
+__FLASHEEPROM__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom.h	2;"	d	line:2
+__FLASHEPROM_LOC__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom_loc.h	2;"	d	line:2
+__FUNCOES__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\funcoes.h	2;"	d	line:2
+__INTERUPT__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\interrupt.h	8;"	d	line:8
+__LED__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.h	2;"	d	line:2
+__PORTS__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\ports.h	2;"	d	line:2
+__PRGMEM_ACC__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\prgmem_access.h	2;"	d	line:2
+__PROCESSOR__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\processor.h	2;"	d	line:2
+__SERIALNUMBER__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\serialNumber.h	2;"	d	line:2
+__SERIALPC__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\SerialPC.h	33;"	d	line:33
+__SIMCARDCTRL__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\simcardcontrol.h	2;"	d	line:2
+__STATUS__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\status.h	2;"	d	line:2
+__SWSERIALDELAYS__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\sw_serial_delays.h	2;"	d	line:2
+__TIMER0_H__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\Timer0.h	2;"	d	line:2
+__TIMER__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.h	8;"	d	line:8
+__VECTORS__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\vectors.h	2;"	d	line:2
+__VERSION__	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\version.h	2;"	d	line:2
+__init	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\c018i.c	17;"	p	line:17	file:	signature:(void)
+__init	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\main.c	68;"	f	line:68
+_do_cinit	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\c018i.c	24;"	p	line:24	file:	signature:(void)
+_do_cinit	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\c018i.c	85;"	f	line:85	signature:(void)
+_entry	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\c018i.c	21;"	p	line:21	file:	signature:(void)
+_entry	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\c018i.c	32;"	f	line:32	signature:(void)
+_init_entry	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\c018i.c	73;"	s	line:73	file:
+_startup	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\c018i.c	22;"	p	line:22	file:	signature:(void)
+_startup	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\c018i.c	38;"	f	line:38	signature:(void)
+a	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\main.c	78;"	l	line:78
+abs_word	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\funcoes.c	20;"	f	line:20	signature:( int wVal )
+abs_word	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\funcoes.h	27;"	p	line:27	signature:( int wVal )
+ascii2int	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\funcoes.c	4;"	f	line:4	signature:( BYTE asciiChar )
+ascii2int	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\funcoes.h	25;"	p	line:25	signature:( BYTE asciiChar )
+bActiveSIMCard	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\simcardcontrol.c	5;"	v	line:5
+bBuffer	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\ChangeFirmware.c	35;"	l	line:35
+bBuffer	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\interrupt.c	77;"	l	line:77
+bChar	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\funcoes.c	5;"	l	line:5
+bCounter	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	564;"	l	line:564
+bCounter	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\prgmem_access.c	79;"	l	line:79
+bData	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	440;"	l	line:440
+bIni	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\serialNumber.c	6;"	v	line:6
+bIniV	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\version.c	26;"	v	line:26
+bInit_Flash	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom.c	29;"	v	line:29
+bLedInit	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.c	38;"	v	line:38
+bLeds	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\main.c	138;"	l	line:138	file:
+bLen	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\ChangeFirmware.c	38;"	l	line:38
+bLen	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	495;"	l	line:495
+bLen	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	597;"	l	line:597
+bMemType	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\ChangeFirmware.c	39;"	l	line:39
+bRet	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom.c	50;"	l	line:50
+bRet	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom.c	71;"	l	line:71
+bRet	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\interrupt.c	100;"	l	line:100
+bRet	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\interrupt.c	76;"	l	line:76
+bSem	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom.c	24;"	v	line:24
+bStartCondition	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\main.c	51;"	v	line:51	file:
+bStatus	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader.c	15;"	l	line:15
+bStatus	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader.c	85;"	l	line:85
+bStatus	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\ChangeFirmware.c	15;"	l	line:15
+bTimer	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\main.c	136;"	l	line:136	file:
+bTimer	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	63;"	m	line:63	struct:Timer	file:
+bTmp	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	566;"	l	line:566
+bTmp	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom.c	50;"	l	line:50
+b_addr	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	317;"	l	line:317
+b_addr	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	329;"	l	line:329
+bufOut	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	411;"	l	line:411
+bufOut	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	525;"	l	line:525
+bufOut	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	542;"	l	line:542
+bufOut	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	563;"	l	line:563
+bufOut	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	596;"	l	line:596
+bufOut	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	629;"	l	line:629
+bufOut	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	653;"	l	line:653
+buffer	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	468;"	l	line:468
+buffer	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	477;"	l	line:477
+cBuffer	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom.c	92;"	l	line:92
+cBuffer	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\prgmem_access.c	75;"	l	line:75
+cFactorySettings	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom.c	13;"	v	line:13
+cTesteString	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\FlashEprom.c	12;"	v	line:12
+cmdBuffer	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	109;"	v	line:109
+crc	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	439;"	l	line:439
+crc	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\main.c	79;"	l	line:79
+crc32	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	630;"	l	line:630
+crc32c	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\crc32.c	121;"	f	line:121	signature:(DWORD crc, const BYTE *data, unsigned int length)
+crc32c	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\crc32.h	9;"	p	line:9	signature:(DWORD crc, const BYTE *data, unsigned int length)
+crc32c_table	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\crc32.c	50;"	v	line:50	file:
+curr_byte	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\c018i.c	91;"	l	line:91	file:
+curr_entry	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\c018i.c	92;"	l	line:92	file:
+dat	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	269;"	l	line:269
+dat	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\rdsspi.c	6;"	l	line:6
+data	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	226;"	l	line:226
+data	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\getsuart.c	15;"	l	line:15
+dataLen	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	312;"	l	line:312
+data_ptr	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\c018i.c	93;"	l	line:93	file:
+devID	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\status.c	8;"	v	line:8
+dwActualBootLoaderUpLoadAddr	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader.c	30;"	l	line:30
+dwAddr	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\ChangeFirmware.c	37;"	l	line:37
+dwAddr	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\prgmem_access.c	180;"	l	line:180
+dwAddr	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\prgmem_access.c	74;"	l	line:74
+dwBoardVersion	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\version.c	20;"	v	line:20
+dwBootLoaderVersion	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\version.c	22;"	v	line:22
+dwCRC32	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader.c	11;"	v	line:11
+dwCounter	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\ChangeFirmware.c	33;"	l	line:33
+dwFirmwareVersion	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\version.c	21;"	v	line:21
+dwFlashTotalUpload	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\ChangeFirmware.c	34;"	l	line:34
+dwSN	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\status.c	9;"	v	line:9
+dwSerNum	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	412;"	l	line:412
+dwSerialNumber	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\serialNumber.c	7;"	v	line:7
+dwTickCount	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	68;"	v	line:68
+dwTime	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	64;"	m	line:64	struct:Timer	file:
+dwTmp	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	565;"	l	line:565
+dwTmp	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\interrupt.c	75;"	l	line:75
+e2prom_read	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom.c	7;"	f	line:7	signature:( BYTE * dest, WORD addr, size_t size )
+e2prom_read	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom.h	43;"	p	line:43	signature:( BYTE * dest, WORD addr, size_t size )
+e2prom_write	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom.c	45;"	f	line:45	signature:( BYTE * src, WORD addr, size_t size )
+e2prom_write	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom.h	52;"	p	line:52	signature:( BYTE * src, WORD addr, size_t size )
+entries	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\c018i.c	79;"	m	line:79	file:
+enviaACK	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	147;"	p	line:147	file:	signature:( BYTE dest )
+enviaACK	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	467;"	f	line:467	signature:( BYTE dest )
+enviaNACK	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	148;"	p	line:148	file:	signature:( BYTE dest, BYTE errCode )
+enviaNACK	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	476;"	f	line:476	signature:( BYTE dest, BYTE errCode )
+enviarPacotePC	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	137;"	p	line:137	file:	signature:(BYTE * buffer, BYTE len )
+enviarPacotePC	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	437;"	f	line:437	signature:(BYTE * buffer, BYTE len )
+from	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\c018i.c	75;"	m	line:75	struct:<anonymous>::_init_entry	file:
+getcUART	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\interrupt.c	54;"	p	line:54	file:
+getsUART	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\getsuart.c	12;"	f	line:12	signature:(char *buffer, unsigned char len)
+i	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	155;"	l	line:155
+i	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	227;"	l	line:227
+i	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	270;"	l	line:270
+i	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	303;"	l	line:303
+i	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	413;"	l	line:413
+i	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	441;"	l	line:441
+i	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	496;"	l	line:496
+i	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	567;"	l	line:567
+i	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom.c	11;"	l	line:11
+i	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\e2prom.c	49;"	l	line:49
+i	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\getsuart.c	14;"	l	line:14
+i	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\prgmem_access.c	16;"	l	line:16
+i	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\prgmem_access.c	32;"	l	line:32
+i	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\prgmem_access.c	78;"	l	line:78
+i	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\rdsspi.c	5;"	l	line:5
+i	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	119;"	l	line:119
+i	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\wrtsspi.c	10;"	l	line:10
+interrupt_at_high_vector	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\interrupt.c	19;"	f	line:19	signature:(void)
+interrupt_at_low_vector	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\interrupt.c	27;"	f	line:27	signature:(void)
+isr_HIGH_Vector	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\interrupt.c	14;"	p	line:14	file:	signature:(void)
+isr_HIGH_Vector	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\interrupt.c	35;"	f	line:35	signature:(void)
+isr_LOW_Vector	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\interrupt.c	15;"	p	line:15	file:	signature:(void)
+isr_LOW_Vector	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\interrupt.c	42;"	f	line:42	signature:(void)
+k	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	253;"	l	line:253
+ledCountPulse	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.c	37;"	v	line:37
+ledState	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.c	36;"	v	line:36
+ledTimer	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.c	35;"	v	line:35
+m	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	252;"	l	line:252
+main	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\c018i.c	19;"	p	line:19	file:	signature:(void)
+main	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\main.c	75;"	f	line:75	signature:( void )
+memprg_read	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\prgmem_access.c	14;"	f	line:14	signature:( BYTE * buf, DWORD dwAddr, BYTE bLen )
+memprg_read	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\prgmem_access.h	13;"	p	line:13	signature:( BYTE * buf, DWORD dwAddr, BYTE bLen )
+memprg_write	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\prgmem_access.c	30;"	f	line:30	signature:( BYTE * buf, DWORD dwAddr, BYTE bLen )
+memprg_write	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\prgmem_access.h	23;"	p	line:23	signature:( BYTE * buf, DWORD dwAddr, BYTE bLen )
+n	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	199;"	l	line:199
+n	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\prgmem_access.c	35;"	l	line:35
+num_init	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\c018i.c	72;"	m	line:72	file:
+pBYTE	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\prgmem_access.c	76;"	l	line:76
+pBuf	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\prgmem_access.c	77;"	l	line:77
+pByte	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	156;"	l	line:156
+p_addr	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	198;"	l	line:198
+page	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\AT45DBxx.c	197;"	l	line:197
+page	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\prgmem_access.c	33;"	l	line:33
+pageOffSet	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\prgmem_access.c	34;"	l	line:34
+prom	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\c018i.c	90;"	l	line:90	file:
+pulseLED	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.c	17;"	v	line:17
+putsUART	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\putsuart.c	11;"	f	line:11	signature:( char *data)
+sStatus	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\main.c	137;"	l	line:137	file:
+serialPC_Buffer	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	105;"	v	line:105
+serialPC_CRC	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	116;"	v	line:116
+serialPC_ContPackages	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	121;"	v	line:121
+serialPC_DLE	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	117;"	v	line:117
+serialPC_DataCounter	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	119;"	v	line:119
+serialPC_DataLen	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	118;"	v	line:118
+serialPC_ProcessaPkt	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	114;"	v	line:114
+serialPC_SondaTimer	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	131;"	v	line:131
+serialPC_timer	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	127;"	v	line:127
+size	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\c018i.c	77;"	m	line:77	struct:<anonymous>::_init_entry	file:
+stSerialPC	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	115;"	v	line:115
+startNULL	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\main.c	59;"	f	line:59	signature:(void)
+statesLED	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.c	25;"	v	line:25
+status	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\status.c	7;"	v	line:7
+timer	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	67;"	v	line:67
+tmInit	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\timer.c	69;"	v	line:69
+to	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\c018i.c	76;"	m	line:76	struct:<anonymous>::_init_entry	file:
+u	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\main.c	80;"	l	line:80
+uartdata	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\uartdata.asm	4;"	v	line:4
+wAddr	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\ChangeFirmware.c	36;"	l	line:36
+wStatus	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\bootloader\SerialPC.c	543;"	l	line:543
+wStatus	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.c	68;"	l	line:68
+wTime	D:\user\rdias\sources\voxage\teste_hit\smsbox-2.0\source\SMS BOX\firmware\led.c	69;"	l	line:69
