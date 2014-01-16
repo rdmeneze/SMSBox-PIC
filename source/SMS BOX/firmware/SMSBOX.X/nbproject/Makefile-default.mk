@@ -8,14 +8,18 @@
 
 
 # Include project Makefile
+ifeq "${IGNORE_LOCAL}" "TRUE"
+# do not include local makefile. User is passing all local related variables already
+else
 include Makefile
 # Include makefile containing local settings
 ifeq "$(wildcard nbproject/Makefile-local-default.mk)" "nbproject/Makefile-local-default.mk"
 include nbproject/Makefile-local-default.mk
 endif
+endif
 
 # Environment
-MKDIR=gnumkdir -p
+MKDIR=mkdir -p
 RM=rm -f 
 MV=mv 
 CP=cp 
@@ -24,13 +28,13 @@ CP=cp
 CND_CONF=default
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 IMAGE_TYPE=debug
-OUTPUT_SUFFIX=cof
-DEBUGGABLE_SUFFIX=cof
+OUTPUT_SUFFIX=elf
+DEBUGGABLE_SUFFIX=elf
 FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/SMSBOX.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 else
 IMAGE_TYPE=production
 OUTPUT_SUFFIX=hex
-DEBUGGABLE_SUFFIX=cof
+DEBUGGABLE_SUFFIX=elf
 FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/SMSBOX.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 endif
 
@@ -40,12 +44,18 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 # Distribution Directory
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
+# Source Files Quoted if spaced
+SOURCEFILES_QUOTED_IF_SPACED=../wrtsspi.c ../setcsspi.c ../rdsspi.c ../clrcsspi.c ../opensspi.c ../writuart.asm ../uartdata.asm ../sw_serial_delays.c ../readuart.asm ../openuart.asm ../putsuart.c ../getsuart.c ../d4tcyx.asm ../delay.c ../funcoes.c ../interrupt.c ../main.c ../serial.c ../led.c ../SerialPC.c ../status.c ../cpu.c ../device.c ../log.c ../serialNumber.c ../crc32.c ../FlashEprom.c ../e2prom.c ../e2prom_loc.c ../AT45DBxx.c ../modemGSM.c ../timer.c ../bootloader.c ../c018i.c ../prgmem_access.c ../CPU_disableAll_Int.asm ../CPU_EnableAll_Int.asm ../version.c ../hw_spi.c ../timer0.c ../simcardcontrol.c ../d1tcyx.asm
+
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1472/wrtsspi.o ${OBJECTDIR}/_ext/1472/setcsspi.o ${OBJECTDIR}/_ext/1472/rdsspi.o ${OBJECTDIR}/_ext/1472/clrcsspi.o ${OBJECTDIR}/_ext/1472/opensspi.o ${OBJECTDIR}/_ext/1472/writuart.o ${OBJECTDIR}/_ext/1472/uartdata.o ${OBJECTDIR}/_ext/1472/sw_serial_delays.o ${OBJECTDIR}/_ext/1472/readuart.o ${OBJECTDIR}/_ext/1472/openuart.o ${OBJECTDIR}/_ext/1472/putsuart.o ${OBJECTDIR}/_ext/1472/getsuart.o ${OBJECTDIR}/_ext/1472/d4tcyx.o ${OBJECTDIR}/_ext/1472/delay.o ${OBJECTDIR}/_ext/1472/funcoes.o ${OBJECTDIR}/_ext/1472/interrupt.o ${OBJECTDIR}/_ext/1472/main.o ${OBJECTDIR}/_ext/1472/serial.o ${OBJECTDIR}/_ext/1472/led.o ${OBJECTDIR}/_ext/1472/SerialPC.o ${OBJECTDIR}/_ext/1472/status.o ${OBJECTDIR}/_ext/1472/cpu.o ${OBJECTDIR}/_ext/1472/device.o ${OBJECTDIR}/_ext/1472/log.o ${OBJECTDIR}/_ext/1472/serialNumber.o ${OBJECTDIR}/_ext/1472/crc32.o ${OBJECTDIR}/_ext/1472/FlashEprom.o ${OBJECTDIR}/_ext/1472/e2prom.o ${OBJECTDIR}/_ext/1472/e2prom_loc.o ${OBJECTDIR}/_ext/1472/AT45DBxx.o ${OBJECTDIR}/_ext/1472/modemGSM.o ${OBJECTDIR}/_ext/1472/timer.o ${OBJECTDIR}/_ext/1472/bootloader.o ${OBJECTDIR}/_ext/1472/c018i.o ${OBJECTDIR}/_ext/1472/prgmem_access.o ${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.o ${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.o ${OBJECTDIR}/_ext/1472/version.o ${OBJECTDIR}/_ext/1472/hw_spi.o ${OBJECTDIR}/_ext/1472/timer0.o ${OBJECTDIR}/_ext/1472/simcardcontrol.o ${OBJECTDIR}/_ext/1472/d1tcyx.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1472/wrtsspi.o.d ${OBJECTDIR}/_ext/1472/setcsspi.o.d ${OBJECTDIR}/_ext/1472/rdsspi.o.d ${OBJECTDIR}/_ext/1472/clrcsspi.o.d ${OBJECTDIR}/_ext/1472/opensspi.o.d ${OBJECTDIR}/_ext/1472/writuart.o.d ${OBJECTDIR}/_ext/1472/uartdata.o.d ${OBJECTDIR}/_ext/1472/sw_serial_delays.o.d ${OBJECTDIR}/_ext/1472/readuart.o.d ${OBJECTDIR}/_ext/1472/openuart.o.d ${OBJECTDIR}/_ext/1472/putsuart.o.d ${OBJECTDIR}/_ext/1472/getsuart.o.d ${OBJECTDIR}/_ext/1472/d4tcyx.o.d ${OBJECTDIR}/_ext/1472/delay.o.d ${OBJECTDIR}/_ext/1472/funcoes.o.d ${OBJECTDIR}/_ext/1472/interrupt.o.d ${OBJECTDIR}/_ext/1472/main.o.d ${OBJECTDIR}/_ext/1472/serial.o.d ${OBJECTDIR}/_ext/1472/led.o.d ${OBJECTDIR}/_ext/1472/SerialPC.o.d ${OBJECTDIR}/_ext/1472/status.o.d ${OBJECTDIR}/_ext/1472/cpu.o.d ${OBJECTDIR}/_ext/1472/device.o.d ${OBJECTDIR}/_ext/1472/log.o.d ${OBJECTDIR}/_ext/1472/serialNumber.o.d ${OBJECTDIR}/_ext/1472/crc32.o.d ${OBJECTDIR}/_ext/1472/FlashEprom.o.d ${OBJECTDIR}/_ext/1472/e2prom.o.d ${OBJECTDIR}/_ext/1472/e2prom_loc.o.d ${OBJECTDIR}/_ext/1472/AT45DBxx.o.d ${OBJECTDIR}/_ext/1472/modemGSM.o.d ${OBJECTDIR}/_ext/1472/timer.o.d ${OBJECTDIR}/_ext/1472/bootloader.o.d ${OBJECTDIR}/_ext/1472/c018i.o.d ${OBJECTDIR}/_ext/1472/prgmem_access.o.d ${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.o.d ${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.o.d ${OBJECTDIR}/_ext/1472/version.o.d ${OBJECTDIR}/_ext/1472/hw_spi.o.d ${OBJECTDIR}/_ext/1472/timer0.o.d ${OBJECTDIR}/_ext/1472/simcardcontrol.o.d ${OBJECTDIR}/_ext/1472/d1tcyx.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1472/wrtsspi.p1 ${OBJECTDIR}/_ext/1472/setcsspi.p1 ${OBJECTDIR}/_ext/1472/rdsspi.p1 ${OBJECTDIR}/_ext/1472/clrcsspi.p1 ${OBJECTDIR}/_ext/1472/opensspi.p1 ${OBJECTDIR}/_ext/1472/writuart.obj ${OBJECTDIR}/_ext/1472/uartdata.obj ${OBJECTDIR}/_ext/1472/sw_serial_delays.p1 ${OBJECTDIR}/_ext/1472/readuart.obj ${OBJECTDIR}/_ext/1472/openuart.obj ${OBJECTDIR}/_ext/1472/putsuart.p1 ${OBJECTDIR}/_ext/1472/getsuart.p1 ${OBJECTDIR}/_ext/1472/d4tcyx.obj ${OBJECTDIR}/_ext/1472/delay.p1 ${OBJECTDIR}/_ext/1472/funcoes.p1 ${OBJECTDIR}/_ext/1472/interrupt.p1 ${OBJECTDIR}/_ext/1472/main.p1 ${OBJECTDIR}/_ext/1472/serial.p1 ${OBJECTDIR}/_ext/1472/led.p1 ${OBJECTDIR}/_ext/1472/SerialPC.p1 ${OBJECTDIR}/_ext/1472/status.p1 ${OBJECTDIR}/_ext/1472/cpu.p1 ${OBJECTDIR}/_ext/1472/device.p1 ${OBJECTDIR}/_ext/1472/log.p1 ${OBJECTDIR}/_ext/1472/serialNumber.p1 ${OBJECTDIR}/_ext/1472/crc32.p1 ${OBJECTDIR}/_ext/1472/FlashEprom.p1 ${OBJECTDIR}/_ext/1472/e2prom.p1 ${OBJECTDIR}/_ext/1472/e2prom_loc.p1 ${OBJECTDIR}/_ext/1472/AT45DBxx.p1 ${OBJECTDIR}/_ext/1472/modemGSM.p1 ${OBJECTDIR}/_ext/1472/timer.p1 ${OBJECTDIR}/_ext/1472/bootloader.p1 ${OBJECTDIR}/_ext/1472/c018i.p1 ${OBJECTDIR}/_ext/1472/prgmem_access.p1 ${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.obj ${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.obj ${OBJECTDIR}/_ext/1472/version.p1 ${OBJECTDIR}/_ext/1472/hw_spi.p1 ${OBJECTDIR}/_ext/1472/timer0.p1 ${OBJECTDIR}/_ext/1472/simcardcontrol.p1 ${OBJECTDIR}/_ext/1472/d1tcyx.obj
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1472/wrtsspi.p1.d ${OBJECTDIR}/_ext/1472/setcsspi.p1.d ${OBJECTDIR}/_ext/1472/rdsspi.p1.d ${OBJECTDIR}/_ext/1472/clrcsspi.p1.d ${OBJECTDIR}/_ext/1472/opensspi.p1.d ${OBJECTDIR}/_ext/1472/writuart.obj.d ${OBJECTDIR}/_ext/1472/uartdata.obj.d ${OBJECTDIR}/_ext/1472/sw_serial_delays.p1.d ${OBJECTDIR}/_ext/1472/readuart.obj.d ${OBJECTDIR}/_ext/1472/openuart.obj.d ${OBJECTDIR}/_ext/1472/putsuart.p1.d ${OBJECTDIR}/_ext/1472/getsuart.p1.d ${OBJECTDIR}/_ext/1472/d4tcyx.obj.d ${OBJECTDIR}/_ext/1472/delay.p1.d ${OBJECTDIR}/_ext/1472/funcoes.p1.d ${OBJECTDIR}/_ext/1472/interrupt.p1.d ${OBJECTDIR}/_ext/1472/main.p1.d ${OBJECTDIR}/_ext/1472/serial.p1.d ${OBJECTDIR}/_ext/1472/led.p1.d ${OBJECTDIR}/_ext/1472/SerialPC.p1.d ${OBJECTDIR}/_ext/1472/status.p1.d ${OBJECTDIR}/_ext/1472/cpu.p1.d ${OBJECTDIR}/_ext/1472/device.p1.d ${OBJECTDIR}/_ext/1472/log.p1.d ${OBJECTDIR}/_ext/1472/serialNumber.p1.d ${OBJECTDIR}/_ext/1472/crc32.p1.d ${OBJECTDIR}/_ext/1472/FlashEprom.p1.d ${OBJECTDIR}/_ext/1472/e2prom.p1.d ${OBJECTDIR}/_ext/1472/e2prom_loc.p1.d ${OBJECTDIR}/_ext/1472/AT45DBxx.p1.d ${OBJECTDIR}/_ext/1472/modemGSM.p1.d ${OBJECTDIR}/_ext/1472/timer.p1.d ${OBJECTDIR}/_ext/1472/bootloader.p1.d ${OBJECTDIR}/_ext/1472/c018i.p1.d ${OBJECTDIR}/_ext/1472/prgmem_access.p1.d ${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.obj.d ${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.obj.d ${OBJECTDIR}/_ext/1472/version.p1.d ${OBJECTDIR}/_ext/1472/hw_spi.p1.d ${OBJECTDIR}/_ext/1472/timer0.p1.d ${OBJECTDIR}/_ext/1472/simcardcontrol.p1.d ${OBJECTDIR}/_ext/1472/d1tcyx.obj.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1472/wrtsspi.o ${OBJECTDIR}/_ext/1472/setcsspi.o ${OBJECTDIR}/_ext/1472/rdsspi.o ${OBJECTDIR}/_ext/1472/clrcsspi.o ${OBJECTDIR}/_ext/1472/opensspi.o ${OBJECTDIR}/_ext/1472/writuart.o ${OBJECTDIR}/_ext/1472/uartdata.o ${OBJECTDIR}/_ext/1472/sw_serial_delays.o ${OBJECTDIR}/_ext/1472/readuart.o ${OBJECTDIR}/_ext/1472/openuart.o ${OBJECTDIR}/_ext/1472/putsuart.o ${OBJECTDIR}/_ext/1472/getsuart.o ${OBJECTDIR}/_ext/1472/d4tcyx.o ${OBJECTDIR}/_ext/1472/delay.o ${OBJECTDIR}/_ext/1472/funcoes.o ${OBJECTDIR}/_ext/1472/interrupt.o ${OBJECTDIR}/_ext/1472/main.o ${OBJECTDIR}/_ext/1472/serial.o ${OBJECTDIR}/_ext/1472/led.o ${OBJECTDIR}/_ext/1472/SerialPC.o ${OBJECTDIR}/_ext/1472/status.o ${OBJECTDIR}/_ext/1472/cpu.o ${OBJECTDIR}/_ext/1472/device.o ${OBJECTDIR}/_ext/1472/log.o ${OBJECTDIR}/_ext/1472/serialNumber.o ${OBJECTDIR}/_ext/1472/crc32.o ${OBJECTDIR}/_ext/1472/FlashEprom.o ${OBJECTDIR}/_ext/1472/e2prom.o ${OBJECTDIR}/_ext/1472/e2prom_loc.o ${OBJECTDIR}/_ext/1472/AT45DBxx.o ${OBJECTDIR}/_ext/1472/modemGSM.o ${OBJECTDIR}/_ext/1472/timer.o ${OBJECTDIR}/_ext/1472/bootloader.o ${OBJECTDIR}/_ext/1472/c018i.o ${OBJECTDIR}/_ext/1472/prgmem_access.o ${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.o ${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.o ${OBJECTDIR}/_ext/1472/version.o ${OBJECTDIR}/_ext/1472/hw_spi.o ${OBJECTDIR}/_ext/1472/timer0.o ${OBJECTDIR}/_ext/1472/simcardcontrol.o ${OBJECTDIR}/_ext/1472/d1tcyx.o
+OBJECTFILES=${OBJECTDIR}/_ext/1472/wrtsspi.p1 ${OBJECTDIR}/_ext/1472/setcsspi.p1 ${OBJECTDIR}/_ext/1472/rdsspi.p1 ${OBJECTDIR}/_ext/1472/clrcsspi.p1 ${OBJECTDIR}/_ext/1472/opensspi.p1 ${OBJECTDIR}/_ext/1472/writuart.obj ${OBJECTDIR}/_ext/1472/uartdata.obj ${OBJECTDIR}/_ext/1472/sw_serial_delays.p1 ${OBJECTDIR}/_ext/1472/readuart.obj ${OBJECTDIR}/_ext/1472/openuart.obj ${OBJECTDIR}/_ext/1472/putsuart.p1 ${OBJECTDIR}/_ext/1472/getsuart.p1 ${OBJECTDIR}/_ext/1472/d4tcyx.obj ${OBJECTDIR}/_ext/1472/delay.p1 ${OBJECTDIR}/_ext/1472/funcoes.p1 ${OBJECTDIR}/_ext/1472/interrupt.p1 ${OBJECTDIR}/_ext/1472/main.p1 ${OBJECTDIR}/_ext/1472/serial.p1 ${OBJECTDIR}/_ext/1472/led.p1 ${OBJECTDIR}/_ext/1472/SerialPC.p1 ${OBJECTDIR}/_ext/1472/status.p1 ${OBJECTDIR}/_ext/1472/cpu.p1 ${OBJECTDIR}/_ext/1472/device.p1 ${OBJECTDIR}/_ext/1472/log.p1 ${OBJECTDIR}/_ext/1472/serialNumber.p1 ${OBJECTDIR}/_ext/1472/crc32.p1 ${OBJECTDIR}/_ext/1472/FlashEprom.p1 ${OBJECTDIR}/_ext/1472/e2prom.p1 ${OBJECTDIR}/_ext/1472/e2prom_loc.p1 ${OBJECTDIR}/_ext/1472/AT45DBxx.p1 ${OBJECTDIR}/_ext/1472/modemGSM.p1 ${OBJECTDIR}/_ext/1472/timer.p1 ${OBJECTDIR}/_ext/1472/bootloader.p1 ${OBJECTDIR}/_ext/1472/c018i.p1 ${OBJECTDIR}/_ext/1472/prgmem_access.p1 ${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.obj ${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.obj ${OBJECTDIR}/_ext/1472/version.p1 ${OBJECTDIR}/_ext/1472/hw_spi.p1 ${OBJECTDIR}/_ext/1472/timer0.p1 ${OBJECTDIR}/_ext/1472/simcardcontrol.p1 ${OBJECTDIR}/_ext/1472/d1tcyx.obj
+
+# Source Files
+SOURCEFILES=../wrtsspi.c ../setcsspi.c ../rdsspi.c ../clrcsspi.c ../opensspi.c ../writuart.asm ../uartdata.asm ../sw_serial_delays.c ../readuart.asm ../openuart.asm ../putsuart.c ../getsuart.c ../d4tcyx.asm ../delay.c ../funcoes.c ../interrupt.c ../main.c ../serial.c ../led.c ../SerialPC.c ../status.c ../cpu.c ../device.c ../log.c ../serialNumber.c ../crc32.c ../FlashEprom.c ../e2prom.c ../e2prom_loc.c ../AT45DBxx.c ../modemGSM.c ../timer.c ../bootloader.c ../c018i.c ../prgmem_access.c ../CPU_disableAll_Int.asm ../CPU_EnableAll_Int.asm ../version.c ../hw_spi.c ../timer0.c ../simcardcontrol.c ../d1tcyx.asm
 
 
 CFLAGS=
@@ -62,537 +72,706 @@ LDLIBSOPTIONS=
 FIXDEPS=fixDeps
 
 .build-conf:  ${BUILD_SUBPROJECTS}
-	${MAKE} ${MAKE_OPTIONS} -f nbproject/Makefile-default.mk dist/${CND_CONF}/${IMAGE_TYPE}/SMSBOX.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+	${MAKE}  -f nbproject/Makefile-default.mk dist/${CND_CONF}/${IMAGE_TYPE}/SMSBOX.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 
 MP_PROCESSOR_OPTION=18F27J13
-MP_PROCESSOR_OPTION_LD=18f27j13
-MP_LINKER_DEBUG_OPTION=
 # ------------------------------------------------------------------------------------
-# Rules for buildStep: assemble
+# Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/1472/writuart.o: ../writuart.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/wrtsspi.p1: ../wrtsspi.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/writuart.o.d 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/_ext/1472/writuart.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG  -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/_ext/1472/writuart.lst\" -e\"${OBJECTDIR}/_ext/1472/writuart.err\" $(ASM_OPTIONS)  -o\"${OBJECTDIR}/_ext/1472/writuart.o\" ../writuart.asm 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/writuart.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/wrtsspi.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/wrtsspi.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/wrtsspi.p1  ../wrtsspi.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/wrtsspi.d ${OBJECTDIR}/_ext/1472/wrtsspi.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/wrtsspi.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/uartdata.o: ../uartdata.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/setcsspi.p1: ../setcsspi.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/uartdata.o.d 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/_ext/1472/uartdata.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG  -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/_ext/1472/uartdata.lst\" -e\"${OBJECTDIR}/_ext/1472/uartdata.err\" $(ASM_OPTIONS)  -o\"${OBJECTDIR}/_ext/1472/uartdata.o\" ../uartdata.asm 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/uartdata.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/setcsspi.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/setcsspi.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/setcsspi.p1  ../setcsspi.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/setcsspi.d ${OBJECTDIR}/_ext/1472/setcsspi.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/setcsspi.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/readuart.o: ../readuart.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/rdsspi.p1: ../rdsspi.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/readuart.o.d 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/_ext/1472/readuart.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG  -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/_ext/1472/readuart.lst\" -e\"${OBJECTDIR}/_ext/1472/readuart.err\" $(ASM_OPTIONS)  -o\"${OBJECTDIR}/_ext/1472/readuart.o\" ../readuart.asm 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/readuart.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/rdsspi.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/rdsspi.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/rdsspi.p1  ../rdsspi.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/rdsspi.d ${OBJECTDIR}/_ext/1472/rdsspi.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/rdsspi.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/openuart.o: ../openuart.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/clrcsspi.p1: ../clrcsspi.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/openuart.o.d 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/_ext/1472/openuart.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG  -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/_ext/1472/openuart.lst\" -e\"${OBJECTDIR}/_ext/1472/openuart.err\" $(ASM_OPTIONS)  -o\"${OBJECTDIR}/_ext/1472/openuart.o\" ../openuart.asm 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/openuart.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/clrcsspi.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/clrcsspi.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/clrcsspi.p1  ../clrcsspi.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/clrcsspi.d ${OBJECTDIR}/_ext/1472/clrcsspi.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/clrcsspi.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/d4tcyx.o: ../d4tcyx.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/opensspi.p1: ../opensspi.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/d4tcyx.o.d 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/_ext/1472/d4tcyx.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG  -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/_ext/1472/d4tcyx.lst\" -e\"${OBJECTDIR}/_ext/1472/d4tcyx.err\" $(ASM_OPTIONS)  -o\"${OBJECTDIR}/_ext/1472/d4tcyx.o\" ../d4tcyx.asm 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/d4tcyx.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/opensspi.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/opensspi.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/opensspi.p1  ../opensspi.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/opensspi.d ${OBJECTDIR}/_ext/1472/opensspi.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/opensspi.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.o: ../CPU_disableAll_Int.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/sw_serial_delays.p1: ../sw_serial_delays.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.o.d 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG  -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.lst\" -e\"${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.err\" $(ASM_OPTIONS)  -o\"${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.o\" ../CPU_disableAll_Int.asm 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/sw_serial_delays.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/sw_serial_delays.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/sw_serial_delays.p1  ../sw_serial_delays.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/sw_serial_delays.d ${OBJECTDIR}/_ext/1472/sw_serial_delays.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/sw_serial_delays.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.o: ../CPU_EnableAll_Int.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/putsuart.p1: ../putsuart.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.o.d 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG  -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.lst\" -e\"${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.err\" $(ASM_OPTIONS)  -o\"${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.o\" ../CPU_EnableAll_Int.asm 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/putsuart.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/putsuart.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/putsuart.p1  ../putsuart.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/putsuart.d ${OBJECTDIR}/_ext/1472/putsuart.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/putsuart.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/d1tcyx.o: ../d1tcyx.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/getsuart.p1: ../getsuart.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/d1tcyx.o.d 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/_ext/1472/d1tcyx.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG  -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/_ext/1472/d1tcyx.lst\" -e\"${OBJECTDIR}/_ext/1472/d1tcyx.err\" $(ASM_OPTIONS)  -o\"${OBJECTDIR}/_ext/1472/d1tcyx.o\" ../d1tcyx.asm 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/d1tcyx.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/getsuart.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/getsuart.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/getsuart.p1  ../getsuart.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/getsuart.d ${OBJECTDIR}/_ext/1472/getsuart.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/getsuart.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/delay.p1: ../delay.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/delay.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/delay.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/delay.p1  ../delay.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/delay.d ${OBJECTDIR}/_ext/1472/delay.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/delay.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/funcoes.p1: ../funcoes.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/funcoes.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/funcoes.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/funcoes.p1  ../funcoes.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/funcoes.d ${OBJECTDIR}/_ext/1472/funcoes.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/funcoes.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/interrupt.p1: ../interrupt.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/interrupt.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/interrupt.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/interrupt.p1  ../interrupt.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/interrupt.d ${OBJECTDIR}/_ext/1472/interrupt.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/interrupt.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/main.p1: ../main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/main.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/main.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/main.p1  ../main.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/main.d ${OBJECTDIR}/_ext/1472/main.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/main.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/serial.p1: ../serial.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/serial.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/serial.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/serial.p1  ../serial.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/serial.d ${OBJECTDIR}/_ext/1472/serial.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/serial.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/led.p1: ../led.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/led.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/led.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/led.p1  ../led.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/led.d ${OBJECTDIR}/_ext/1472/led.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/led.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/SerialPC.p1: ../SerialPC.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/SerialPC.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/SerialPC.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/SerialPC.p1  ../SerialPC.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/SerialPC.d ${OBJECTDIR}/_ext/1472/SerialPC.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/SerialPC.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/status.p1: ../status.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/status.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/status.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/status.p1  ../status.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/status.d ${OBJECTDIR}/_ext/1472/status.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/status.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/cpu.p1: ../cpu.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/cpu.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/cpu.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/cpu.p1  ../cpu.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/cpu.d ${OBJECTDIR}/_ext/1472/cpu.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/cpu.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/device.p1: ../device.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/device.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/device.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/device.p1  ../device.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/device.d ${OBJECTDIR}/_ext/1472/device.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/device.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/log.p1: ../log.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/log.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/log.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/log.p1  ../log.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/log.d ${OBJECTDIR}/_ext/1472/log.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/log.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/serialNumber.p1: ../serialNumber.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/serialNumber.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/serialNumber.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/serialNumber.p1  ../serialNumber.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/serialNumber.d ${OBJECTDIR}/_ext/1472/serialNumber.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/serialNumber.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/crc32.p1: ../crc32.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/crc32.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/crc32.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/crc32.p1  ../crc32.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/crc32.d ${OBJECTDIR}/_ext/1472/crc32.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/crc32.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/FlashEprom.p1: ../FlashEprom.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/FlashEprom.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/FlashEprom.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/FlashEprom.p1  ../FlashEprom.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/FlashEprom.d ${OBJECTDIR}/_ext/1472/FlashEprom.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/FlashEprom.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/e2prom.p1: ../e2prom.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/e2prom.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/e2prom.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/e2prom.p1  ../e2prom.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/e2prom.d ${OBJECTDIR}/_ext/1472/e2prom.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/e2prom.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/e2prom_loc.p1: ../e2prom_loc.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/e2prom_loc.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/e2prom_loc.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/e2prom_loc.p1  ../e2prom_loc.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/e2prom_loc.d ${OBJECTDIR}/_ext/1472/e2prom_loc.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/e2prom_loc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/AT45DBxx.p1: ../AT45DBxx.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/AT45DBxx.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/AT45DBxx.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/AT45DBxx.p1  ../AT45DBxx.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/AT45DBxx.d ${OBJECTDIR}/_ext/1472/AT45DBxx.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/AT45DBxx.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/modemGSM.p1: ../modemGSM.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/modemGSM.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/modemGSM.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/modemGSM.p1  ../modemGSM.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/modemGSM.d ${OBJECTDIR}/_ext/1472/modemGSM.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/modemGSM.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/timer.p1: ../timer.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/timer.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/timer.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/timer.p1  ../timer.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/timer.d ${OBJECTDIR}/_ext/1472/timer.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/timer.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/bootloader.p1: ../bootloader.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/bootloader.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/bootloader.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/bootloader.p1  ../bootloader.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/bootloader.d ${OBJECTDIR}/_ext/1472/bootloader.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/bootloader.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/c018i.p1: ../c018i.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/c018i.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/c018i.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/c018i.p1  ../c018i.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/c018i.d ${OBJECTDIR}/_ext/1472/c018i.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/c018i.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/prgmem_access.p1: ../prgmem_access.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/prgmem_access.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/prgmem_access.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/prgmem_access.p1  ../prgmem_access.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/prgmem_access.d ${OBJECTDIR}/_ext/1472/prgmem_access.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/prgmem_access.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/version.p1: ../version.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/version.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/version.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/version.p1  ../version.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/version.d ${OBJECTDIR}/_ext/1472/version.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/version.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/hw_spi.p1: ../hw_spi.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/hw_spi.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/hw_spi.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/hw_spi.p1  ../hw_spi.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/hw_spi.d ${OBJECTDIR}/_ext/1472/hw_spi.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/hw_spi.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/timer0.p1: ../timer0.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/timer0.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/timer0.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/timer0.p1  ../timer0.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/timer0.d ${OBJECTDIR}/_ext/1472/timer0.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/timer0.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/simcardcontrol.p1: ../simcardcontrol.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/simcardcontrol.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/simcardcontrol.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/simcardcontrol.p1  ../simcardcontrol.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/simcardcontrol.d ${OBJECTDIR}/_ext/1472/simcardcontrol.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/simcardcontrol.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 else
-${OBJECTDIR}/_ext/1472/writuart.o: ../writuart.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/wrtsspi.p1: ../wrtsspi.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/writuart.o.d 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/_ext/1472/writuart.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/_ext/1472/writuart.lst\" -e\"${OBJECTDIR}/_ext/1472/writuart.err\" $(ASM_OPTIONS)  -o\"${OBJECTDIR}/_ext/1472/writuart.o\" ../writuart.asm 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/writuart.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/wrtsspi.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/wrtsspi.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/wrtsspi.p1  ../wrtsspi.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/wrtsspi.d ${OBJECTDIR}/_ext/1472/wrtsspi.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/wrtsspi.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/uartdata.o: ../uartdata.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/setcsspi.p1: ../setcsspi.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/uartdata.o.d 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/_ext/1472/uartdata.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/_ext/1472/uartdata.lst\" -e\"${OBJECTDIR}/_ext/1472/uartdata.err\" $(ASM_OPTIONS)  -o\"${OBJECTDIR}/_ext/1472/uartdata.o\" ../uartdata.asm 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/uartdata.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/setcsspi.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/setcsspi.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/setcsspi.p1  ../setcsspi.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/setcsspi.d ${OBJECTDIR}/_ext/1472/setcsspi.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/setcsspi.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/readuart.o: ../readuart.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/rdsspi.p1: ../rdsspi.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/readuart.o.d 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/_ext/1472/readuart.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/_ext/1472/readuart.lst\" -e\"${OBJECTDIR}/_ext/1472/readuart.err\" $(ASM_OPTIONS)  -o\"${OBJECTDIR}/_ext/1472/readuart.o\" ../readuart.asm 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/readuart.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/rdsspi.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/rdsspi.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/rdsspi.p1  ../rdsspi.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/rdsspi.d ${OBJECTDIR}/_ext/1472/rdsspi.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/rdsspi.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/openuart.o: ../openuart.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/clrcsspi.p1: ../clrcsspi.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/openuart.o.d 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/_ext/1472/openuart.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/_ext/1472/openuart.lst\" -e\"${OBJECTDIR}/_ext/1472/openuart.err\" $(ASM_OPTIONS)  -o\"${OBJECTDIR}/_ext/1472/openuart.o\" ../openuart.asm 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/openuart.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/clrcsspi.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/clrcsspi.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/clrcsspi.p1  ../clrcsspi.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/clrcsspi.d ${OBJECTDIR}/_ext/1472/clrcsspi.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/clrcsspi.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/d4tcyx.o: ../d4tcyx.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/opensspi.p1: ../opensspi.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/d4tcyx.o.d 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/_ext/1472/d4tcyx.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/_ext/1472/d4tcyx.lst\" -e\"${OBJECTDIR}/_ext/1472/d4tcyx.err\" $(ASM_OPTIONS)  -o\"${OBJECTDIR}/_ext/1472/d4tcyx.o\" ../d4tcyx.asm 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/d4tcyx.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/opensspi.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/opensspi.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/opensspi.p1  ../opensspi.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/opensspi.d ${OBJECTDIR}/_ext/1472/opensspi.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/opensspi.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.o: ../CPU_disableAll_Int.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/sw_serial_delays.p1: ../sw_serial_delays.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.o.d 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.lst\" -e\"${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.err\" $(ASM_OPTIONS)  -o\"${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.o\" ../CPU_disableAll_Int.asm 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/sw_serial_delays.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/sw_serial_delays.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/sw_serial_delays.p1  ../sw_serial_delays.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/sw_serial_delays.d ${OBJECTDIR}/_ext/1472/sw_serial_delays.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/sw_serial_delays.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.o: ../CPU_EnableAll_Int.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/putsuart.p1: ../putsuart.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.o.d 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.lst\" -e\"${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.err\" $(ASM_OPTIONS)  -o\"${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.o\" ../CPU_EnableAll_Int.asm 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/putsuart.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/putsuart.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/putsuart.p1  ../putsuart.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/putsuart.d ${OBJECTDIR}/_ext/1472/putsuart.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/putsuart.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/d1tcyx.o: ../d1tcyx.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/getsuart.p1: ../getsuart.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/d1tcyx.o.d 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/_ext/1472/d1tcyx.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/_ext/1472/d1tcyx.lst\" -e\"${OBJECTDIR}/_ext/1472/d1tcyx.err\" $(ASM_OPTIONS)  -o\"${OBJECTDIR}/_ext/1472/d1tcyx.o\" ../d1tcyx.asm 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/d1tcyx.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/getsuart.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/getsuart.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/getsuart.p1  ../getsuart.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/getsuart.d ${OBJECTDIR}/_ext/1472/getsuart.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/getsuart.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/delay.p1: ../delay.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/delay.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/delay.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/delay.p1  ../delay.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/delay.d ${OBJECTDIR}/_ext/1472/delay.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/delay.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/funcoes.p1: ../funcoes.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/funcoes.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/funcoes.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/funcoes.p1  ../funcoes.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/funcoes.d ${OBJECTDIR}/_ext/1472/funcoes.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/funcoes.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/interrupt.p1: ../interrupt.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/interrupt.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/interrupt.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/interrupt.p1  ../interrupt.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/interrupt.d ${OBJECTDIR}/_ext/1472/interrupt.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/interrupt.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/main.p1: ../main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/main.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/main.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/main.p1  ../main.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/main.d ${OBJECTDIR}/_ext/1472/main.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/main.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/serial.p1: ../serial.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/serial.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/serial.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/serial.p1  ../serial.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/serial.d ${OBJECTDIR}/_ext/1472/serial.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/serial.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/led.p1: ../led.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/led.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/led.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/led.p1  ../led.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/led.d ${OBJECTDIR}/_ext/1472/led.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/led.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/SerialPC.p1: ../SerialPC.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/SerialPC.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/SerialPC.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/SerialPC.p1  ../SerialPC.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/SerialPC.d ${OBJECTDIR}/_ext/1472/SerialPC.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/SerialPC.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/status.p1: ../status.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/status.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/status.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/status.p1  ../status.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/status.d ${OBJECTDIR}/_ext/1472/status.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/status.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/cpu.p1: ../cpu.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/cpu.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/cpu.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/cpu.p1  ../cpu.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/cpu.d ${OBJECTDIR}/_ext/1472/cpu.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/cpu.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/device.p1: ../device.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/device.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/device.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/device.p1  ../device.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/device.d ${OBJECTDIR}/_ext/1472/device.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/device.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/log.p1: ../log.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/log.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/log.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/log.p1  ../log.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/log.d ${OBJECTDIR}/_ext/1472/log.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/log.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/serialNumber.p1: ../serialNumber.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/serialNumber.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/serialNumber.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/serialNumber.p1  ../serialNumber.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/serialNumber.d ${OBJECTDIR}/_ext/1472/serialNumber.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/serialNumber.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/crc32.p1: ../crc32.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/crc32.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/crc32.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/crc32.p1  ../crc32.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/crc32.d ${OBJECTDIR}/_ext/1472/crc32.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/crc32.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/FlashEprom.p1: ../FlashEprom.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/FlashEprom.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/FlashEprom.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/FlashEprom.p1  ../FlashEprom.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/FlashEprom.d ${OBJECTDIR}/_ext/1472/FlashEprom.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/FlashEprom.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/e2prom.p1: ../e2prom.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/e2prom.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/e2prom.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/e2prom.p1  ../e2prom.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/e2prom.d ${OBJECTDIR}/_ext/1472/e2prom.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/e2prom.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/e2prom_loc.p1: ../e2prom_loc.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/e2prom_loc.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/e2prom_loc.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/e2prom_loc.p1  ../e2prom_loc.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/e2prom_loc.d ${OBJECTDIR}/_ext/1472/e2prom_loc.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/e2prom_loc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/AT45DBxx.p1: ../AT45DBxx.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/AT45DBxx.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/AT45DBxx.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/AT45DBxx.p1  ../AT45DBxx.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/AT45DBxx.d ${OBJECTDIR}/_ext/1472/AT45DBxx.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/AT45DBxx.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/modemGSM.p1: ../modemGSM.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/modemGSM.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/modemGSM.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/modemGSM.p1  ../modemGSM.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/modemGSM.d ${OBJECTDIR}/_ext/1472/modemGSM.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/modemGSM.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/timer.p1: ../timer.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/timer.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/timer.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/timer.p1  ../timer.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/timer.d ${OBJECTDIR}/_ext/1472/timer.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/timer.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/bootloader.p1: ../bootloader.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/bootloader.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/bootloader.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/bootloader.p1  ../bootloader.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/bootloader.d ${OBJECTDIR}/_ext/1472/bootloader.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/bootloader.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/c018i.p1: ../c018i.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/c018i.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/c018i.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/c018i.p1  ../c018i.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/c018i.d ${OBJECTDIR}/_ext/1472/c018i.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/c018i.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/prgmem_access.p1: ../prgmem_access.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/prgmem_access.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/prgmem_access.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/prgmem_access.p1  ../prgmem_access.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/prgmem_access.d ${OBJECTDIR}/_ext/1472/prgmem_access.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/prgmem_access.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/version.p1: ../version.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/version.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/version.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/version.p1  ../version.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/version.d ${OBJECTDIR}/_ext/1472/version.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/version.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/hw_spi.p1: ../hw_spi.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/hw_spi.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/hw_spi.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/hw_spi.p1  ../hw_spi.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/hw_spi.d ${OBJECTDIR}/_ext/1472/hw_spi.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/hw_spi.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/timer0.p1: ../timer0.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/timer0.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/timer0.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/timer0.p1  ../timer0.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/timer0.d ${OBJECTDIR}/_ext/1472/timer0.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/timer0.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1472/simcardcontrol.p1: ../simcardcontrol.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1472 
+	@${RM} ${OBJECTDIR}/_ext/1472/simcardcontrol.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/simcardcontrol.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1472/simcardcontrol.p1  ../simcardcontrol.c 
+	@-${MV} ${OBJECTDIR}/_ext/1472/simcardcontrol.d ${OBJECTDIR}/_ext/1472/simcardcontrol.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/simcardcontrol.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 
 # ------------------------------------------------------------------------------------
-# Rules for buildStep: compile
+# Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/1472/wrtsspi.o: ../wrtsspi.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/writuart.obj: ../writuart.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/wrtsspi.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/wrtsspi.o   ../wrtsspi.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/wrtsspi.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/writuart.obj.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/writuart.obj 
+	${MP_CC} -C $(MP_EXTRA_AS_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"  -o${OBJECTDIR}/_ext/1472/writuart.obj  ../writuart.asm 
+	@-${MV} ${OBJECTDIR}/_ext/1472/writuart.d ${OBJECTDIR}/_ext/1472/writuart.obj.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/writuart.obj.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/setcsspi.o: ../setcsspi.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/uartdata.obj: ../uartdata.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/setcsspi.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/setcsspi.o   ../setcsspi.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/setcsspi.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/uartdata.obj.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/uartdata.obj 
+	${MP_CC} -C $(MP_EXTRA_AS_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"  -o${OBJECTDIR}/_ext/1472/uartdata.obj  ../uartdata.asm 
+	@-${MV} ${OBJECTDIR}/_ext/1472/uartdata.d ${OBJECTDIR}/_ext/1472/uartdata.obj.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/uartdata.obj.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/rdsspi.o: ../rdsspi.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/readuart.obj: ../readuart.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/rdsspi.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/rdsspi.o   ../rdsspi.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/rdsspi.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/readuart.obj.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/readuart.obj 
+	${MP_CC} -C $(MP_EXTRA_AS_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"  -o${OBJECTDIR}/_ext/1472/readuart.obj  ../readuart.asm 
+	@-${MV} ${OBJECTDIR}/_ext/1472/readuart.d ${OBJECTDIR}/_ext/1472/readuart.obj.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/readuart.obj.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/clrcsspi.o: ../clrcsspi.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/openuart.obj: ../openuart.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/clrcsspi.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/clrcsspi.o   ../clrcsspi.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/clrcsspi.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/openuart.obj.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/openuart.obj 
+	${MP_CC} -C $(MP_EXTRA_AS_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"  -o${OBJECTDIR}/_ext/1472/openuart.obj  ../openuart.asm 
+	@-${MV} ${OBJECTDIR}/_ext/1472/openuart.d ${OBJECTDIR}/_ext/1472/openuart.obj.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/openuart.obj.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/opensspi.o: ../opensspi.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/d4tcyx.obj: ../d4tcyx.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/opensspi.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/opensspi.o   ../opensspi.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/opensspi.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/d4tcyx.obj.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/d4tcyx.obj 
+	${MP_CC} -C $(MP_EXTRA_AS_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"  -o${OBJECTDIR}/_ext/1472/d4tcyx.obj  ../d4tcyx.asm 
+	@-${MV} ${OBJECTDIR}/_ext/1472/d4tcyx.d ${OBJECTDIR}/_ext/1472/d4tcyx.obj.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/d4tcyx.obj.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/sw_serial_delays.o: ../sw_serial_delays.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.obj: ../CPU_disableAll_Int.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/sw_serial_delays.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/sw_serial_delays.o   ../sw_serial_delays.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/sw_serial_delays.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.obj.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.obj 
+	${MP_CC} -C $(MP_EXTRA_AS_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"  -o${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.obj  ../CPU_disableAll_Int.asm 
+	@-${MV} ${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.d ${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.obj.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.obj.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/putsuart.o: ../putsuart.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.obj: ../CPU_EnableAll_Int.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/putsuart.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/putsuart.o   ../putsuart.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/putsuart.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.obj.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.obj 
+	${MP_CC} -C $(MP_EXTRA_AS_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"  -o${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.obj  ../CPU_EnableAll_Int.asm 
+	@-${MV} ${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.d ${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.obj.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.obj.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/getsuart.o: ../getsuart.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/d1tcyx.obj: ../d1tcyx.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/getsuart.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/getsuart.o   ../getsuart.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/getsuart.o 
-	
-${OBJECTDIR}/_ext/1472/delay.o: ../delay.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/delay.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/delay.o   ../delay.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/delay.o 
-	
-${OBJECTDIR}/_ext/1472/funcoes.o: ../funcoes.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/funcoes.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/funcoes.o   ../funcoes.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/funcoes.o 
-	
-${OBJECTDIR}/_ext/1472/interrupt.o: ../interrupt.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/interrupt.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/interrupt.o   ../interrupt.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/interrupt.o 
-	
-${OBJECTDIR}/_ext/1472/main.o: ../main.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/main.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/main.o   ../main.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/main.o 
-	
-${OBJECTDIR}/_ext/1472/serial.o: ../serial.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/serial.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/serial.o   ../serial.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/serial.o 
-	
-${OBJECTDIR}/_ext/1472/led.o: ../led.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/led.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/led.o   ../led.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/led.o 
-	
-${OBJECTDIR}/_ext/1472/SerialPC.o: ../SerialPC.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/SerialPC.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/SerialPC.o   ../SerialPC.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/SerialPC.o 
-	
-${OBJECTDIR}/_ext/1472/status.o: ../status.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/status.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/status.o   ../status.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/status.o 
-	
-${OBJECTDIR}/_ext/1472/cpu.o: ../cpu.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/cpu.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/cpu.o   ../cpu.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/cpu.o 
-	
-${OBJECTDIR}/_ext/1472/device.o: ../device.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/device.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/device.o   ../device.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/device.o 
-	
-${OBJECTDIR}/_ext/1472/log.o: ../log.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/log.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/log.o   ../log.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/log.o 
-	
-${OBJECTDIR}/_ext/1472/serialNumber.o: ../serialNumber.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/serialNumber.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/serialNumber.o   ../serialNumber.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/serialNumber.o 
-	
-${OBJECTDIR}/_ext/1472/crc32.o: ../crc32.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/crc32.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/crc32.o   ../crc32.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/crc32.o 
-	
-${OBJECTDIR}/_ext/1472/FlashEprom.o: ../FlashEprom.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/FlashEprom.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/FlashEprom.o   ../FlashEprom.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/FlashEprom.o 
-	
-${OBJECTDIR}/_ext/1472/e2prom.o: ../e2prom.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/e2prom.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/e2prom.o   ../e2prom.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/e2prom.o 
-	
-${OBJECTDIR}/_ext/1472/e2prom_loc.o: ../e2prom_loc.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/e2prom_loc.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/e2prom_loc.o   ../e2prom_loc.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/e2prom_loc.o 
-	
-${OBJECTDIR}/_ext/1472/AT45DBxx.o: ../AT45DBxx.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/AT45DBxx.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/AT45DBxx.o   ../AT45DBxx.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/AT45DBxx.o 
-	
-${OBJECTDIR}/_ext/1472/modemGSM.o: ../modemGSM.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/modemGSM.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/modemGSM.o   ../modemGSM.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/modemGSM.o 
-	
-${OBJECTDIR}/_ext/1472/timer.o: ../timer.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/timer.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/timer.o   ../timer.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/timer.o 
-	
-${OBJECTDIR}/_ext/1472/bootloader.o: ../bootloader.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/bootloader.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/bootloader.o   ../bootloader.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/bootloader.o 
-	
-${OBJECTDIR}/_ext/1472/c018i.o: ../c018i.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/c018i.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/c018i.o   ../c018i.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/c018i.o 
-	
-${OBJECTDIR}/_ext/1472/prgmem_access.o: ../prgmem_access.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/prgmem_access.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/prgmem_access.o   ../prgmem_access.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/prgmem_access.o 
-	
-${OBJECTDIR}/_ext/1472/version.o: ../version.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/version.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/version.o   ../version.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/version.o 
-	
-${OBJECTDIR}/_ext/1472/hw_spi.o: ../hw_spi.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/hw_spi.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/hw_spi.o   ../hw_spi.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/hw_spi.o 
-	
-${OBJECTDIR}/_ext/1472/timer0.o: ../timer0.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/timer0.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/timer0.o   ../timer0.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/timer0.o 
-	
-${OBJECTDIR}/_ext/1472/simcardcontrol.o: ../simcardcontrol.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/simcardcontrol.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/simcardcontrol.o   ../simcardcontrol.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/simcardcontrol.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/d1tcyx.obj.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/d1tcyx.obj 
+	${MP_CC} -C $(MP_EXTRA_AS_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"  -o${OBJECTDIR}/_ext/1472/d1tcyx.obj  ../d1tcyx.asm 
+	@-${MV} ${OBJECTDIR}/_ext/1472/d1tcyx.d ${OBJECTDIR}/_ext/1472/d1tcyx.obj.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/d1tcyx.obj.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 else
-${OBJECTDIR}/_ext/1472/wrtsspi.o: ../wrtsspi.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/writuart.obj: ../writuart.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/wrtsspi.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/wrtsspi.o   ../wrtsspi.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/wrtsspi.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/writuart.obj.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/writuart.obj 
+	${MP_CC} -C $(MP_EXTRA_AS_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"  -o${OBJECTDIR}/_ext/1472/writuart.obj  ../writuart.asm 
+	@-${MV} ${OBJECTDIR}/_ext/1472/writuart.d ${OBJECTDIR}/_ext/1472/writuart.obj.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/writuart.obj.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/setcsspi.o: ../setcsspi.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/uartdata.obj: ../uartdata.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/setcsspi.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/setcsspi.o   ../setcsspi.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/setcsspi.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/uartdata.obj.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/uartdata.obj 
+	${MP_CC} -C $(MP_EXTRA_AS_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"  -o${OBJECTDIR}/_ext/1472/uartdata.obj  ../uartdata.asm 
+	@-${MV} ${OBJECTDIR}/_ext/1472/uartdata.d ${OBJECTDIR}/_ext/1472/uartdata.obj.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/uartdata.obj.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/rdsspi.o: ../rdsspi.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/readuart.obj: ../readuart.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/rdsspi.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/rdsspi.o   ../rdsspi.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/rdsspi.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/readuart.obj.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/readuart.obj 
+	${MP_CC} -C $(MP_EXTRA_AS_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"  -o${OBJECTDIR}/_ext/1472/readuart.obj  ../readuart.asm 
+	@-${MV} ${OBJECTDIR}/_ext/1472/readuart.d ${OBJECTDIR}/_ext/1472/readuart.obj.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/readuart.obj.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/clrcsspi.o: ../clrcsspi.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/openuart.obj: ../openuart.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/clrcsspi.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/clrcsspi.o   ../clrcsspi.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/clrcsspi.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/openuart.obj.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/openuart.obj 
+	${MP_CC} -C $(MP_EXTRA_AS_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"  -o${OBJECTDIR}/_ext/1472/openuart.obj  ../openuart.asm 
+	@-${MV} ${OBJECTDIR}/_ext/1472/openuart.d ${OBJECTDIR}/_ext/1472/openuart.obj.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/openuart.obj.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/opensspi.o: ../opensspi.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/d4tcyx.obj: ../d4tcyx.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/opensspi.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/opensspi.o   ../opensspi.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/opensspi.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/d4tcyx.obj.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/d4tcyx.obj 
+	${MP_CC} -C $(MP_EXTRA_AS_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"  -o${OBJECTDIR}/_ext/1472/d4tcyx.obj  ../d4tcyx.asm 
+	@-${MV} ${OBJECTDIR}/_ext/1472/d4tcyx.d ${OBJECTDIR}/_ext/1472/d4tcyx.obj.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/d4tcyx.obj.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/sw_serial_delays.o: ../sw_serial_delays.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.obj: ../CPU_disableAll_Int.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/sw_serial_delays.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/sw_serial_delays.o   ../sw_serial_delays.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/sw_serial_delays.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.obj.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.obj 
+	${MP_CC} -C $(MP_EXTRA_AS_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"  -o${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.obj  ../CPU_disableAll_Int.asm 
+	@-${MV} ${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.d ${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.obj.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/CPU_disableAll_Int.obj.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/putsuart.o: ../putsuart.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.obj: ../CPU_EnableAll_Int.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/putsuart.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/putsuart.o   ../putsuart.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/putsuart.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.obj.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.obj 
+	${MP_CC} -C $(MP_EXTRA_AS_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"  -o${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.obj  ../CPU_EnableAll_Int.asm 
+	@-${MV} ${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.d ${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.obj.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/CPU_EnableAll_Int.obj.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1472/getsuart.o: ../getsuart.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1472/d1tcyx.obj: ../d1tcyx.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/getsuart.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/getsuart.o   ../getsuart.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/getsuart.o 
-	
-${OBJECTDIR}/_ext/1472/delay.o: ../delay.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/delay.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/delay.o   ../delay.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/delay.o 
-	
-${OBJECTDIR}/_ext/1472/funcoes.o: ../funcoes.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/funcoes.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/funcoes.o   ../funcoes.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/funcoes.o 
-	
-${OBJECTDIR}/_ext/1472/interrupt.o: ../interrupt.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/interrupt.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/interrupt.o   ../interrupt.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/interrupt.o 
-	
-${OBJECTDIR}/_ext/1472/main.o: ../main.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/main.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/main.o   ../main.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/main.o 
-	
-${OBJECTDIR}/_ext/1472/serial.o: ../serial.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/serial.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/serial.o   ../serial.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/serial.o 
-	
-${OBJECTDIR}/_ext/1472/led.o: ../led.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/led.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/led.o   ../led.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/led.o 
-	
-${OBJECTDIR}/_ext/1472/SerialPC.o: ../SerialPC.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/SerialPC.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/SerialPC.o   ../SerialPC.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/SerialPC.o 
-	
-${OBJECTDIR}/_ext/1472/status.o: ../status.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/status.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/status.o   ../status.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/status.o 
-	
-${OBJECTDIR}/_ext/1472/cpu.o: ../cpu.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/cpu.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/cpu.o   ../cpu.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/cpu.o 
-	
-${OBJECTDIR}/_ext/1472/device.o: ../device.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/device.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/device.o   ../device.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/device.o 
-	
-${OBJECTDIR}/_ext/1472/log.o: ../log.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/log.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/log.o   ../log.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/log.o 
-	
-${OBJECTDIR}/_ext/1472/serialNumber.o: ../serialNumber.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/serialNumber.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/serialNumber.o   ../serialNumber.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/serialNumber.o 
-	
-${OBJECTDIR}/_ext/1472/crc32.o: ../crc32.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/crc32.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/crc32.o   ../crc32.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/crc32.o 
-	
-${OBJECTDIR}/_ext/1472/FlashEprom.o: ../FlashEprom.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/FlashEprom.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/FlashEprom.o   ../FlashEprom.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/FlashEprom.o 
-	
-${OBJECTDIR}/_ext/1472/e2prom.o: ../e2prom.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/e2prom.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/e2prom.o   ../e2prom.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/e2prom.o 
-	
-${OBJECTDIR}/_ext/1472/e2prom_loc.o: ../e2prom_loc.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/e2prom_loc.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/e2prom_loc.o   ../e2prom_loc.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/e2prom_loc.o 
-	
-${OBJECTDIR}/_ext/1472/AT45DBxx.o: ../AT45DBxx.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/AT45DBxx.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/AT45DBxx.o   ../AT45DBxx.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/AT45DBxx.o 
-	
-${OBJECTDIR}/_ext/1472/modemGSM.o: ../modemGSM.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/modemGSM.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/modemGSM.o   ../modemGSM.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/modemGSM.o 
-	
-${OBJECTDIR}/_ext/1472/timer.o: ../timer.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/timer.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/timer.o   ../timer.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/timer.o 
-	
-${OBJECTDIR}/_ext/1472/bootloader.o: ../bootloader.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/bootloader.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/bootloader.o   ../bootloader.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/bootloader.o 
-	
-${OBJECTDIR}/_ext/1472/c018i.o: ../c018i.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/c018i.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/c018i.o   ../c018i.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/c018i.o 
-	
-${OBJECTDIR}/_ext/1472/prgmem_access.o: ../prgmem_access.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/prgmem_access.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/prgmem_access.o   ../prgmem_access.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/prgmem_access.o 
-	
-${OBJECTDIR}/_ext/1472/version.o: ../version.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/version.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/version.o   ../version.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/version.o 
-	
-${OBJECTDIR}/_ext/1472/hw_spi.o: ../hw_spi.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/hw_spi.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/hw_spi.o   ../hw_spi.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/hw_spi.o 
-	
-${OBJECTDIR}/_ext/1472/timer0.o: ../timer0.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/timer0.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/timer0.o   ../timer0.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/timer0.o 
-	
-${OBJECTDIR}/_ext/1472/simcardcontrol.o: ../simcardcontrol.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/simcardcontrol.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -D_BAUDRATE_AUTOBAUD -I"../C:/mcc18/h" -I".." -Ls -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/simcardcontrol.o   ../simcardcontrol.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/simcardcontrol.o 
+	@${RM} ${OBJECTDIR}/_ext/1472/d1tcyx.obj.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/d1tcyx.obj 
+	${MP_CC} -C $(MP_EXTRA_AS_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"  -o${OBJECTDIR}/_ext/1472/d1tcyx.obj  ../d1tcyx.asm 
+	@-${MV} ${OBJECTDIR}/_ext/1472/d1tcyx.d ${OBJECTDIR}/_ext/1472/d1tcyx.obj.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1472/d1tcyx.obj.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: link
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-dist/${CND_CONF}/${IMAGE_TYPE}/SMSBOX.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
+dist/${CND_CONF}/${IMAGE_TYPE}/SMSBOX.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    ../18f4680.lkr
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_LD} $(MP_EXTRA_LD_PRE) "..\18f4680.lkr"  -p$(MP_PROCESSOR_OPTION_LD)  -w -x -u_DEBUG -m"$(BINDIR_)$(TARGETBASE).map" -w -l"../C:/mcc18/lib"  -z__MPLAB_BUILD=1  -u_CRUNTIME -z__MPLAB_DEBUG=1 $(MP_LINKER_DEBUG_OPTION) -l ${MP_CC_DIR}\\..\\lib  -o dist/${CND_CONF}/${IMAGE_TYPE}/SMSBOX.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}   
+	${MP_CC} $(MP_EXTRA_LD_PRE) --chip=$(MP_PROCESSOR_OPTION) -G -mdist/${CND_CONF}/${IMAGE_TYPE}/SMSBOX.X.${IMAGE_TYPE}.map  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"        -odist/${CND_CONF}/${IMAGE_TYPE}/SMSBOX.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
+	@${RM} dist/${CND_CONF}/${IMAGE_TYPE}/SMSBOX.X.${IMAGE_TYPE}.hex 
+	
 else
-dist/${CND_CONF}/${IMAGE_TYPE}/SMSBOX.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
+dist/${CND_CONF}/${IMAGE_TYPE}/SMSBOX.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   ../18f4680.lkr
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_LD} $(MP_EXTRA_LD_PRE) "..\18f4680.lkr"  -p$(MP_PROCESSOR_OPTION_LD)  -w  -m"$(BINDIR_)$(TARGETBASE).map" -w -l"../C:/mcc18/lib"  -z__MPLAB_BUILD=1  -u_CRUNTIME -l ${MP_CC_DIR}\\..\\lib  -o dist/${CND_CONF}/${IMAGE_TYPE}/SMSBOX.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}   
+	${MP_CC} $(MP_EXTRA_LD_PRE) --chip=$(MP_PROCESSOR_OPTION) -G -mdist/${CND_CONF}/${IMAGE_TYPE}/SMSBOX.X.${IMAGE_TYPE}.map  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -odist/${CND_CONF}/${IMAGE_TYPE}/SMSBOX.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
+	
 endif
 
 
@@ -611,7 +790,7 @@ endif
 # Enable dependency checking
 .dep.inc: .depcheck-impl
 
-DEPFILES=$(shell mplabwildcard ${POSSIBLE_DEPFILES})
+DEPFILES=$(shell "${PATH_TO_IDE_BIN}"mplabwildcard ${POSSIBLE_DEPFILES})
 ifneq (${DEPFILES},)
 include ${DEPFILES}
 endif

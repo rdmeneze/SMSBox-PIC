@@ -37,7 +37,7 @@ void ClearCSHWSPI(void);
 /**************************************************************************
 Macro       : putcSWSPI
 
-Description : macro is identical to WriteSWSPI,#define to WriteSWSPI in sw_spi.h
+Description : macro is identical to SWSPIWrite,#define to SWSPIWrite in sw_spi.h
  
 Arguments   : None
  
@@ -48,7 +48,7 @@ Remarks     : None
 /**************************************************************************
 Macro       : SWputcSPI
 
-Description : macro is identical to WriteSWSPI,#define to WriteSWSPI in sw_spi.h
+Description : macro is identical to SWSPIWrite,#define to SWSPIWrite in sw_spi.h
  
 Arguments   : None
  

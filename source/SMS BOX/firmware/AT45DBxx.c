@@ -166,7 +166,7 @@ void AT45DBXX_Init( void ){
   ClearCSSWSPI();
 
   // comando de leitura diretamente da SDRAM
-  WriteSWSPI( FLASH_CMD_MAIN_MEM_PAGE_RD );
+  SWSPIWrite( FLASH_CMD_MAIN_MEM_PAGE_RD );
 
   // endereços e páginas concatenados
   WriteFlashAddr( addr );
@@ -174,7 +174,7 @@ void AT45DBXX_Init( void ){
   // envia DUMMY_BYTES
   i = FLASH_CMD_MAIN_MEM_PAGE_RD_DMY_BYTE;
   do{
-    WriteSWSPI( 0xFF );
+    SWSPIWrite( 0xFF );
   }while( --i );
 
    pByte = bufOut;
@@ -227,7 +227,7 @@ BYTE WaitBusy( void ){
   BYTE i;
 
   ClearCSSWSPI();
-  WriteSWSPI( FLASH_CMD_READ_STATUS_REG );
+  SWSPIWrite( FLASH_CMD_READ_STATUS_REG );
 
   i = 0;
   do { 
@@ -274,7 +274,7 @@ void Write24BitAddr(DWORD addr) {
 		addr >>= 8; 
 	} 
 	for (i = 0; i < 3; i++) { 
-    WriteSWSPI(dat[2-i]); 
+    SWSPIWrite(dat[2-i]);
 	} 
 }
 
@@ -303,10 +303,10 @@ void WriteBuffer1(BYTE addr, BYTE num, BYTE *dat)  {
 	BYTE i; 
 
 	ClearCSSWSPI(); 
-	WriteSWSPI( FLASH_CMD_BUFFER1_WR );		 				
+	SWSPIWrite( FLASH_CMD_BUFFER1_WR );
 	Write24BitAddr(addr);	 					
 	for (i = 0; i < num; i++) { 
-		WriteSWSPI(*(dat+i)); 
+		SWSPIWrite(*(dat+i));
 	} 
 	SetCSSWSPI(); 
 } 
@@ -317,7 +317,7 @@ void WriteBuffer1ToMainMemo(WORD page) {
 	DWORD b_addr; 
 
 	ClearCSSWSPI();		 
-	WriteSWSPI( FLASH_CMD_BUFFER1_2_MAINMEMORY_PAGE_ERASE );
+	SWSPIWrite( FLASH_CMD_BUFFER1_2_MAINMEMORY_PAGE_ERASE );
 	b_addr = (DWORD)((page) << 9); 
 	Write24BitAddr(b_addr); 
 	SetCSSWSPI(); 
@@ -329,7 +329,7 @@ void WriteMainMemoToBuffer1(WORD page) {
 	DWORD b_addr; 
 
 	ClearCSSWSPI();		 
-	WriteSWSPI( FLASH_CMD_MAIN_MEM_PAGE_2_BUFFER1_TRANSFER );		 					
+	SWSPIWrite( FLASH_CMD_MAIN_MEM_PAGE_2_BUFFER1_TRANSFER );
 	b_addr = (DWORD)((page) << 9); 
 	Write24BitAddr(b_addr); 
 	SetCSSWSPI(); 

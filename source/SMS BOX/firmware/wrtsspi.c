@@ -2,11 +2,11 @@
 #include "sw_spi.h"
 
 /********************************************************************
-*       Function Name:  WriteSWSPI                                  *
+*       Function Name:  SWSPIWrite                                  *
 *       Parameters:     data: data to transmit                      *
 *       Description:    This routine sets the CS pin high.          *
 ********************************************************************/
-void WriteSWSPI( char output ){
+void SWSPIWrite( char output ){
 	BYTE i; 
 
 #if defined(MODE0)    // Mode 0

@@ -105,10 +105,10 @@ void OpenSWSPI(void);
  *  \brief  Do a write in the software SPI
  *  \param output the data for write into the memory
  */
-void WriteSWSPI( char output );
+void SWSPIWrite( char output );
 
 //! macro for definition of SWWriteSPI funcion
-#define SWWriteSPI WriteSWSPI
+#define SWWriteSPI SWSPIWrite
 
 /**
  *  \brief  Set the Chip Select (CS)
@@ -127,18 +127,18 @@ void ClearCSSWSPI(void);
 /**************************************************************************
 Macro       : putcSWSPI
 
-Description : macro is identical to WriteSWSPI,#define to WriteSWSPI in sw_spi.h
+Description : macro is identical to SWSPIWrite,#define to SWSPIWrite in sw_spi.h
  
 Arguments   : None
  
 Remarks     : None 
 ***************************************************************************/
-#define putcSWSPI WriteSWSPI
+#define putcSWSPI SWSPIWrite
 
 /**************************************************************************
 Macro       : SWputcSPI
 
-Description : macro is identical to WriteSWSPI,#define to WriteSWSPI in sw_spi.h
+Description : macro is identical to SWSPIWrite,#define to SWSPIWrite in sw_spi.h
  
 Arguments   : None
  

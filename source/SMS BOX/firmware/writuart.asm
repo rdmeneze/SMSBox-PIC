@@ -1,4 +1,4 @@
-#include <P18CXXX.INC>
+#include <pic18.inc>
 #include "sw_uart_pinout.inc"
     
         EXTERN  DelayRXHalfBitUART
